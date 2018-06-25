@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Adaptive Template with float</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+	user-select:none;
+}
+
+.row{
+position:fixed;
+width:100%;
+height:100%;
+display:inline-box;
+overflow:auto;
+}
+
+.row:after(){
+content:"";
+clear:both;
+display:table;
+}
+
+.left,.right{
+float:left;
+padding:15px;
+border:3px solid lightblue;
+height:100%;
+font-size: 1em;
+overflow:auto;
+}
+
+.left{
+width:30%;
+background-color:#d5ffd5;
+
+}
+
+.right{
+width:70%;
+background-color:lightblue;
+border-color:lightgreen;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.bottombr{
+width:100%;
+border-bottom:3px dashed gray;
+}
+
+@media screen and (max-width: 575px){
+img {
+display:none;
+}
+.left,.right{
+width: 100%;
+
+}
+}
+
+<!-- @media only screen and (max-width: 600px) { -->
+    <!-- body {font-size: 1em;} 
+} -->
+
+@media only screen and (min-width: 600px) {
+    body {font-size: 1.2em;}
+}
+
+@media only screen and (min-width: 768px) {
+    body {font-size: 1.4em;}
+}
+
+@media only screen and (min-width: 992px) {
+    body {font-size: 1.5em;}
+}
+
+@media only screen and (min-width: 1200px) {
+    body {font-size: 3em;}
+}
+
+	.btn{
+padding:10px;
+border:2px solid gray:
+margin:5px;
+background-color:black;
+color:white;
+border-radius:25%;
+user-select:none;
+}
+
+.btn:hover{
+background-color:green;
+}
+</style>
+
+</head>
+<body>
+<div class = 'row'>
+	<div class="left">
+		<h2>Left column</h2>
+
+	</div>
+	<div class="right">
+	<h2>Right column</h2>
+	<a href = '..\\index.html' class='btn'>goto index</a>;
+	</div>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Adaptive template with flex</title>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <Link rel="stylesheet" type="text/css" href="mainCSS.css">
+<script type = 'text/javascript' src = 'mainJS.js'></script> -->
+
+<style>	
+@media only screen and (min-width: 768px) {.top {background-color: blue;}}
+
+@media only screen and (min-width: 992px) {.top {background-color: orange;}}
+
+@media only screen and (min-width: 1200px) {.top {background-color: pink;}}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+	html, body{
+	height = 100%;
+	}
+
+
+.row{
+/*padding:10px;
+border:5px double red;
+margin:15px;*/
+height: -webkit-fill-available;
+display:flex;
+}
+
+.content,.sidenav{
+	overflow:auto;
+	padding:10px;
+	margin:2px;
+	border:3px dashed;
+}
+
+.content{
+width:70%;
+background-color:lightblue;
+border-color:green;
+text-shadow:3px 3px 5px #333;
+}
+
+.sidenav {
+background-color: #dedede;
+width:30%;
+border-color:orange;
+text-align:center;
+}
+
+.content {
+    padding-left: 20px;
+}
+
+.btn {
+padding:14px;
+border:3px solid red;
+margin:5px;
+background-color:#ff8100a1;
+color:black;
+user-select:none;
+display:-webkit-inline-box;
+}
+
+.btn:hover{
+background-color:#dc5e21;
+}
+
+@media screen and (max-width: 600px){
+	.sidenav,.content{
+	width:100%;
+	display:block;
+	overflow:auto;
+	width:100%;
+	}
+	.content{
+		background-color:lightblue;
+	}
+	.sidenav{
+		background-color:#dedede;
+		text-align:center;
+	}
+	.row{
+	display:block;
+	}
+}
+</style>
+
+</head>
+<body'>
+<div class = 'row'>
+	<div class="sidenav">
+	<h2>.sidenav div</h2>
+	</div>
+
+	<div class="content">
+	<h2>CSS Template</h2>
+	<a href = '..\\index.html' class='btn'>goto index</a>;
+	</div>
+</div>
+
+</body>
+</html>
