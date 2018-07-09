@@ -1,0 +1,170 @@
+.sampleChunk{
+	width:99%;
+	overflow:hidden;
+	background-color: #3333;
+	text-align:center;
+	padding:3px;
+	border:2px solid brown;
+	margin:5px;
+}
+	
+
+
+/*####################################################################################################*/
+/* 									SAMPLE 1    													  */  
+  @keyframes go-left-right {   
+    from {
+      left: 0px;               
+    }
+    to {
+      left: calc(100% - 50px);
+    }
+  }
+
+  @-webkit-keyframes go-left-right {
+    from {
+      left: 0px;
+    }
+    to {
+      left: calc(100% - 50px);
+    }
+  }
+
+  .progress {
+    animation: go-left-right 3s infinite alternate;
+    -webkit-animation: go-left-right 3s infinite alternate;
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    background: lime;
+  }
+  
+  
+#div2 {
+background-color: green;
+padding: 5px;
+border: 2px solid orange;
+margin: 3px;
+transition-duration: 3s;
+}
+
+#digit {
+  width: .5em;
+  overflow: hidden;
+  font: 32px "Courier New", monospace;
+}
+
+#stripe.animate {
+  margin-left: -174px;
+  transition-property: margin-left;
+  transition-duration: 9s;
+  transition-timing-function: linear;
+}
+
+
+  
+#square, .sq{
+	height: 20px;
+	width: 20px;
+	padding: 10px;
+	border: 1px solid red;
+	margin: 3px;
+	background-color: red;
+	}
+	
+#square.colored{
+	
+	background-color: green;
+	transition-property: background-color;
+	transition-duration: 4s;
+	  transition-timing-function: linear;
+	}
+	
+
+/*####################################################################################################*/
+
+
+#oCanv,.ccv{
+	padding: 3px;
+	border: 2px solid black;
+	margin: auto;
+	resize: both;
+	overflow:hidden;
+	transition-property: width, height;
+	transition-duration: 10ms;
+	transition-timing-function: linear;
+}
+
+.toCent{
+	margin: auto;
+}
+
+.btn{
+	padding: 10px;
+	border: 2px solid red;
+	margin: 5px;
+	background-color: gray;
+	display: inline-block;
+	user-select: none;
+}
+
+.btn:hover{
+	background-color: #3ade0e;
+}
+.btnGr,.cGr{
+	padding:10px;
+	border:3px double red;
+	margin: 5px;
+	display:inline-block;
+	
+}
+.cGr{
+	border-color:blue;
+}
+
+input{
+	width:75px;
+}
+#modalMsg{
+	background-color: black;
+	color: #ffffff;
+	padding: 10px;
+	border: 2px solid red;
+	margin: 5px;
+	position: fixed;
+	bottom: 1%;
+	z-index: 1;
+	width: 5%;
+	height: 5%;
+	display: block;
+}
+
+#modalMsg.animated{
+	animation: moveToL 5s,moveToU 3s 5s, moveToR 3s 8s, moveToB 4s 11s, hideT 2s 17s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	animation-iteration-count: 1;
+}
+
+@keyframes hideT{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+
+.cdiv{
+	padding:10px;
+	border:1px solid black;
+	margin: auto;
+	display:bldock;
+	resize:both;
+	overflow:hidden;
+	transition-property: width;
+	transition-duration: 10ms;
+}
+
+#cvs {
+	border: 1px solid red;
+}
+
