@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Adaptive template with flex</title>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <Link rel="stylesheet" type="text/css" href="mainCSS.css">
+<script type = 'text/javascript' src = 'mainJS.js'></script> -->
+<link rel="stylesheet" type="text/css" href="myCSSS.css">
+		<script type='text/javascript' src="testjs.js"></script>
+<style>	
+@media only screen and (min-width: 768px) {.top {background-color: blue;}}
+
+@media only screen and (min-width: 992px) {.top {background-color: orange;}}
+
+@media only screen and (min-width: 1200px) {.top {background-color: pink;}}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+	
+}
+
+	html, body{
+	height = 100%;
+	}
+
+
+.row{
+/*padding:10px;
+border:5px double red;
+margin:15px;*/
+height: -webkit-fill-available;
+display:flex;
+}
+
+.content,.sidenav{
+	overflow:auto;
+	padding:10px;
+	margin:2px;
+	border:3px dashed;
+}
+
+.content{
+width:100%;
+background-color:lightblue;
+border-color:green;
+text-shadow:3px 3px 5px #333;
+}
+
+.sidenav {
+background-color: #dedede;
+width:30%;
+border-color:orange;
+text-align:center;
+}
+
+.content {
+    padding-left: 20px;
+}
+
+.btn{
+padding:10px;
+border:2px solid gray:
+margin:5px;
+background-color:black;
+color:white;
+border-radius:25%;
+user-select:none;
+}
+
+.btn:hover{
+background-color:green;
+}
+@media screen and (max-width: 600px){
+	.sidenav,.content{
+	width:100%;
+	display:block;
+	overflow:auto;
+	width:100%;
+	}
+	.content{
+		background-color:lightblue;
+	}
+	.sidenav{
+		background-color:#dedede;
+		text-align:center;
+	}
+	.row{
+	display:block;
+	}
+}
+</style>
+
+</head>
+<body'>
+<div class = 'row'>
+	<div class="sidenav" id  = 'menu'>
+	<h2>Option's</h2>
+	.sidenav div
+	 <div class = 'area'>
+	<h1> Interface Option's </h1>
+	Font-family  <select id = 'ffam'>
+		<option value ="cursive">cursive</option>
+		<option value = "monospace">monospace</option>
+		<option value = "serif">serif</option>	
+		<option value ="cursive">sans-serif</option>
+		<option value = "monospace">inherit</option>
+		<option value = "fantasy">fantasy</option>
+		</select>
+		</br>
+		</br>	Font-style  
+		<select id = 'fft'>
+		<option value ="italic">italic</option>
+		<option value = "normal">normal</option>
+		<option value = "oblique">oblique</option>	
+		<option value ="unset">unset</option>
+		</select>
+		</br>
+		Font size 
+		<input type = "text" id = "fontSize" placeholder = "font Size">
+
+<div class = 'area'>
+Backgound URL: 
+<input type = "text" id = "urlBack" placeholder = "background.jpg">
+Backgound size:
+</br>
+<select id = 'fft'>
+<option value = 'px'>px</option>
+<option value = 'em'>em</option>
+<option value = '%'>%</option>
+</select>
+</br>
+<input type = "text" id = "xsize" placeholder = "x">
+<input type = "text" id = "ysize" placeholder = "y">
+</br>
+		</div>
+	</div>
+	</br>
+	</br>
+  <div class = 'area'>
+  <h1>Team Option's</h1>
+<input type = "text" id = "aName" placeholder = "Team#1 Name">
+<input type = "text" id = "bName" placeholder = "Team#2 Name">
+</br>
+<input type = "text" id = "ac4" placeholder = "Team#1a">
+<input type = "text" id = "bc4" placeholder = "Team#2b">
+</br>
+
+</div>
+</br>
+<div class = 'area'>
+<h1>Color option's</h1>
+</br>
+</div>
+	
+	</br>
+	<div class = 'area' >
+	<h1> Timer Option's </h1>
+	<input type = "text" id = "tmin" placeholder = "min">
+	<input type = "text" id = "tsek" placeholder = "sek">
+	</br>
+	Rate: 
+	<input type = "text" id = "rms" placeholder = "ms">
+	min>=500</br>
+	<div class = 'btn'>apply</div>
+	<div class = 'btn'>reset</div>
+	</div>
+	
+	</div>
+	
+	
+	<div class="content">
+	<h2>.content</h2>
+		<div id = "plq">
+		<div><h1 id = "lt">Team#1</h1>
+		<h1 id = 'lf' class = 's4et'>qq</h1>
+		</div>
+		
+		<h1 id = "timer2"> ММ:сс</h1>
+		<div>
+		<h1 id = "rt">Team#2</h1>
+		<h1 id = 'rf' class = 's4et'>ww</h1>
+		</div>
+	</div>
+	<!-- <a href = '..\index.html' class='btn'>return to index page</a> -->
+	</div>
+	
+</div>
+
+<div id = "msgFrame"> msg Here</div>
+
+</body>
+</html>

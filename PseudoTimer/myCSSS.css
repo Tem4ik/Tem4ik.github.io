@@ -1,0 +1,126 @@
+	body, html {
+			height: 100%;
+			margin: 0;
+		}	
+		.area{
+			text-align: center;
+			display: inline-block;
+			top: 15%;
+			left: 33%;
+			padding:5px;
+			border: 3px solid red;
+			margin: 3px;
+			background-color:yellow;
+		}
+		input {
+			width: 33%;
+			
+		}
+		.ma{
+			
+			
+		}
+		.dummy{
+		
+		}
+		input{
+		margin: 15px;
+		}
+		
+		/*#menu{
+		top:0;
+		left:0;
+		position:fixed;
+		height:100%;
+		width:100%;
+		z-index:1;
+		background-color:rgba(0,0,0,0.7);
+		color:red;
+		}*/
+		
+		.btn {
+			padding: 5px;
+			border: 2px solid red;
+			margin: 5px;
+			display: inline-block;
+		}
+		
+		.btn:hover {
+		border:2px dashed green;
+		color:red;
+		}
+		
+				/*MSG FRAME*/
+		#msgFrame {
+	visibility: hidden;
+	text-align: center;
+	background-color: #AAA;
+	padding: 30px;
+	border: 3px solid black;
+	margin: 10px;
+	position: absolute;
+	width: 300px;
+	height:	50px;
+	z-index: 1;
+	left: 40%;
+	bottom: 5%;
+	font-size: 21px;
+	}
+	
+#msgFrame.show {
+	visibility: visible;
+	animation: fadein 0.5s, fadeout 0.3s 3s;
+}	
+
+@keyframes fadein	{
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 5%; opacity: 1;}
+	}
+	
+@keyframes fadeout	{
+	from {bottom: 5%; opacity:1;}
+	to {bottom: 0; opacity: 0;}
+}
+			/*MSG FRAME*/
+		
+		
+		
+		#plq {
+		top: 20%;
+		display: flex;
+		padding: 5px;
+		border: solid 2px blue;
+		float: left;
+		}
+		
+		.s4et {
+		color: black;
+		border: dashed 1px blue;
+		margin: 1px;
+		}
+		
+		#timer2{
+		top: 10%;
+		left: 40%;
+			color:yellow;
+			font-size:100px;
+			border: solid 2px red;
+			padding: 5px;
+		}
+		
+		#lt, #rt {
+		
+		margin: 1px;
+		border: solid 2px red;
+		padding: 5px;
+		font-size:100px;
+		color: black;
+		}
+		
+		#lt {
+		left: 20%;
+		}
+		
+		#rt {
+		left: 70%;
+		}		
