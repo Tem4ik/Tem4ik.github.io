@@ -280,10 +280,10 @@ this.sw = function(){
             res += ' ' + min;
             res += ' ' + sek;
 			res += ' ' + ms;
-			document.getElementById('msin').value = ms;
-			document.getElementById('mssek').value = sek;
-			document.getElementById('msmin').value = min;
-			document.getElementById('mshr').value = hr;
+			//document.getElementById('msin').value = ms;
+			document.getElementById('tsek').value = sek;
+			document.getElementById('tmin').value = min;
+			//document.getElementById('mshr').value = hr;
 			//document.getElementById('ptext').innerHTML = '' + this.pat + ' ' + res;
 			}
 			
