@@ -4,7 +4,7 @@ function setup(){
 	tip('setup here','green', 2500);
 	addEvents();
 	//setupKB();
-	tosetup();
+	toesetup();
 }
 
 var msq = 'on'
@@ -13,14 +13,20 @@ var msq = 'on'
 function addEvents(){
 	let fontFamily = did('ffam');
 	fontFamily.onchange = function(){
+		wq.ff = fontFamily[fontFamily.selectedIndex].value;
+		wq.save();
 		tip(fontFamily[fontFamily.selectedIndex].value,'blue');
 		}
 	let fontStyle = did('fft');
 		fontStyle.onchange = function(){
+			wq.fs= fontStyle[fontStyle.selectedIndex].value;
+			wq.save();
 		tip(fontStyle[fontStyle.selectedIndex].value,'blue');
 		}
 	let fontSize = did('fontSize');
 		fontSize.onchange = function(){
+			wq.fsize = fontSize.value;
+			wq.save();
 		tip('font size: ' +fontSize.value,'blue');
 		}	
 	let xsize = did('xsize');
@@ -31,8 +37,19 @@ function addEvents(){
 		ysize.onchange = function(){
 		tip('Ysize: ' + ysize.value,'blue')
 		}
+		
+/*	let wmin = did('tmin');
+		wmin.onchange = function(){
+		applyTimer();
+	}
+	let wsek = did('tsek');
+		wsek.onchange = function(){
+		applyTimer();
+	}		*/
+		
 		ek = new keyBoard();
 		ek.init();
+		
 
 }
 var ek = new keyBoard();
@@ -332,10 +349,12 @@ var tup = toggleUptime();
 
 // Team Option's setup
 
-function tosetup(){
+function toesetup(){
 setupVar();
 toSetup();
 timerSetup();
+wq.load();
+wq.apply();
 }
 
 function toSetup(){
@@ -359,25 +378,31 @@ did('rt').innerHTML = this.value;
 ccn.onchange = function(){
     tqq.s41 = ccn.value;
     eTeam();
+did('lf').innerHTML = this.value;
 }
 
 bbn.onchange = function(){
     tqq.s42 = bbn.value;
     eTeam();
+	did('rf').innerHTML = this.value;
 }
 	
 }
 function timerSetup(){
+
 	let tmin = did('tmin');
 	let tsek = did('tsek');
 	
 	tmin.onchange = function(){
+			tip('timerSetup()');
 		tiq.min = tmin.value;
 		tTiq();
+		applyTimer();
 	}
 	tsek.onchange = function(){
 		tiq.sek = tsek.value;
 		tTiq();
+		applyTimer();
 	}
 	
 }
@@ -425,4 +450,76 @@ did('bc4').value = aa.s42;
 return aa;
 }
 
+function applyTimer(){
+let ret = 0;
+let zmin=did('tmin');
+let zsek = did('tsek');
+let min = Number(zmin.value);
+let sek = Number(zsek.value);
+ret = min *60000 + sek*1000;
+tp.pat = ret;
+tip(ret);
+tp.show();
+}
+
+
+
+
+
+var wq= {
+    ff:'monospace',
+    fs:'normal',
+    fsize:42,
+    backURL:'background.jpg',
+    backX:100,
+    backY:100,
+    backS:'%',
+    reset:function(){
+        this.ff='inherit';
+        //this.fs='normal';
+        this.fs='italic';
+        this.fsize=42;
+        this.backURL='background.jpg';
+        this.backX=100;
+        this.backY=100;
+        this.backS='%';
+    },
+    save:function(){
+        localStorage.setItem('pageOptions',JSON.stringify(this));
+		this.apply();
+    },
+    load:function(){  
+    let vaq='';
+    if(localStorage.pageOptions !== undefined){
+    vaq=JSON.parse(localStorage.getItem('pageOptions'));
+    } 
+    
+    this.ff = vaq.ff;
+    this.fs = vaq.fs;
+    this.fsize = vaq.fsize;
+    this.backURL = vaq.backURL;
+    this.backX = vaq.backX;
+    this.backY = vaq.backY;
+    this.backS = vaq.backS;
+    },
+    stylestr:function(){
+        let result='Font-family:';
+        //result = '';
+        result += this.ff;
+        result +=';Font-style: '
+        result += this.fs;
+        result +=';Font-size:'
+        result += this.fsize;
+        result +='px;'
+        result += 'background:url('
+        result += this.backURL
+        result += ');'
+        result += 'background-repeat:no-repeat;'
+        return result;
+    },
+    apply:function(){
+        let qss = qs('.content');
+        qss.style=this.stylestr();
+    }
+}
 
