@@ -11,6 +11,7 @@
 			border: 3px solid rgba(0,0,0,0.3);
 			margin: 3px;
 			background-color:rgba(0,0,0,0.1);
+
 		}
 		input {
 			width: 33%;
@@ -19,6 +20,9 @@
 		.ma{
 			
 			
+		}
+		.di{
+			cursor: not-allowed;
 		}
 		.dummy{
 		
@@ -97,6 +101,7 @@
 		color: black;
 		border: dashed 1px blue;
 		margin: 1px;
+		text-align:center;
 		}
 		
 		#timer2{
