@@ -66,6 +66,23 @@ border: 1px solid black;
 	line-height:1;
 	/* padding:0.4em 0.3em; */
 	margin:1.4em 0em;
+	display: -webkit-inline-box;
+	width: -webkit-fill-available;
+}
+
+#topHeader div.container {
+	position: absolute;
+	width: -webkit-fill-available;
+	top:0.5em;
+	left: 0;
+	font-size:2em;
+	font-family: sans-serif;
+}
+
+#myNavbar {
+	font-size:2em;
+	font-family: sans-serif;		
+	letter-spacing:0;
 }
 
 .nav li{
