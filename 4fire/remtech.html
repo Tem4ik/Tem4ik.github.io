@@ -15,7 +15,7 @@
   <link type="text/css" rel="stylesheet" href="techCSS.css">
   <style>
   body {
-    font: 400 15px Lato, sans-serif;
+    font: 400 15px Roboto, Open Sans, Helvetica, Arial, sans-serif;
     line-height: 1.8;
     color: #818181;
   }
@@ -196,24 +196,28 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div class = "preHeader" id ="topHeader">
-<div class = "column">
+<div id="topTop" style = "padding:0.1em">
+
+</div>
+<div class = "row preHeader" id ="topHeader">
+<div class = "col-sm-3 text-center">
 <img src='pic/Hrepair/wmachineLogotipe.png'>
+<img src='pic/Hrepair/wmachineLogotipe2.png'>
 </div>
-<div class="column">
-<h2>
+<div class="col-sm-6 text-center">
+<div class='container'>
 "Company Name" </br>
-<p>ремонт стиральных машин на дому</p>
-</h2>
+ремонт стиральных машин, бытовой техники на дому
 </div>
-<div class = "column phone">
+</div>
+<div class = "col-sm-3 text-center phone">
+
 <!-- href="tel:+7..." -->
-<h3>ЗВОНИТЕ</h3>
+ЗВОНИТЕ
+</br>
 <a class="telNum" href="tel:8-888-88-88">8-888-88-88</a>
-<h3><strong>
+</br>
 С 10 ДО 22
-</strong></h3>
-</div>
 </div>
 </div>
 <nav class="navbar navbar-default navbar-fixed-top mycss">
@@ -224,25 +228,42 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+	  
+	 
+      <!-- <a class="navbar-brand" href="#myPage"> 
+	  Logo
+	  </a> -->
+	 <a href="#myPage">
+	  <img class='navbar-brand np' src='pic/Hrepair/wmach_57.png'>
+	 </a>
+	 
+	  
     </div>
+	
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-		<li><a href="#topHeader">go top</a></li>
+		<li><a href="#topTop">go top</a></li>
         <li><a href="#about">О нас</a></li>
         <li><a href="#services">Услуги</a></li>
         <li><a href="#portfolio">Работы</a></li>
         <li><a href="#pricing">Цены</a></li>
         <li><a href="#contact">Контакты</a></li>
+		<li><a href="#footer">go bottom</a></li>
       </ul>
     </div>
+	
   </div>
+  
 </nav>
 
 <div class="jumbotron text-center" id="mrone">
+<img class='img-responsive maxwidth' src='pic/mr.jpg'>
+  <div class='text-center abs'>
   <h1>ИмяНашейКомпании</h1> 
   </br>
   <p>Ремонт бытовой техники на дому, без наебалова.</p> 
+  </div>
+  
   <form>
     <div class="input-group disabled">
       <input type="email" class="form-control" size="50" placeholder="Email Address" required>
@@ -264,16 +285,18 @@
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
+	  <div style="text-align:center;">
+	<p style="font-size:30px;">тик так:</p>
+	<p id="demo" style="font-size:30px"></p> </div>
     </div>
 	</br>
 	
-	<div style="text-align:center;">
-	<p style="font-size:30px;">тик так:</p>
-	<p id="demo" style="font-size:30px"></p> </div>
+	
   </div>
 </div>
 
-<div class="container-fluid bg-grey" id="mrtwo">
+<div class="container-fluid bg-grey">
+<img class="img-responsive maxwidth" src='pic/mr4.jpg'>
   <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -393,11 +416,11 @@
 
 <!-- Container (Pricing Section) -->
 <div id="pricing" class="container-fluid">
-  <div class="text-center">
+  <div class="row text-center">
   <h2>Спектр наших услуг</h2>
   <div class="oc">
   <div class="inoc">
-
+<div class = 'col-sm-4'>
 <ul>
 <h2>Ремонт, разборка и утилизация</h2>
 <li>- Ремонт модулей						</li>
@@ -409,12 +432,13 @@
 <li>- РАЗБОРКА ПММ </li>
 <li>- Утилизация стиральных машин </li>
 <li>- Утилизация холодильников. </li>
-<li> </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="oc">
 <div class="inoc">	
+<div class = 'col-sm-4'>
 <ul>
 <h2>НОВЫЕ ЗАПЧАСТИ В НАЛИЧИИ И ПОД ЗАКАЗ.</h2>
 <li>!!! Специальные цены для мастеров </li>
@@ -425,6 +449,8 @@
 </ul>
 </div>
 </div>
+</div>
+<div class = 'col-sm-4'>
 <div class="oc">
 <div class="inoc">
 <ul>
@@ -441,16 +467,21 @@
 <li>- Дозаторы. </li>
 <li>- Ручки люков. </li>
 </ul>
-</div>
-</div>
+</div></div>
+</div></div>
 </br class=".el">
+<div class='row'>
+<div class='col-sm-12	 text-center'>
     <h2>Цены</h2>
     <h4>Гибкие цены на любой вкус и кошелёк.</h4>
   <table>
 <tbody>
 <tr>
-<td>НАИМЕНОВАНИЕ</td>
-<td>СТОИМОСТЬ</td>
+<td><b>
+НАИМЕНОВАНИЕ
+</b>
+</td>
+<td><b>СТОИМОСТЬ</b></td>
 </tr>
 <tr>
 <td>Диагностика</td>
@@ -502,7 +533,10 @@
 </tr>
 </tbody>
 </table>
-<h3><b>Точная стоимость ремонта может быть установлена только после осмотра вашей стиральной машины. Поэтому диагноз по телефону является предварительным. Диагностика мастером из другой фирмы в расчет не принимается. (Бывает неоправданно завышенный или неправильно определена поломка). Скидки предоставляются льготным категориям граждан.</b></h3>
+</div>
+</div>
+</br>
+<p>Точная стоимость ремонта может быть установлена только после осмотра вашей стиральной машины. Поэтому диагноз по телефону является предварительным. Диагностика мастером из другой фирмы в расчет не принимается. (Бывает неоправданно завышенный или неправильно определена поломка). Скидки предоставляются льготным категориям граждан.</p>
   </div>
   <div class="row slideanim" style="display:none">
     <div class="col-sm-4 col-xs-12">
@@ -596,13 +630,15 @@
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" id="footer">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>Bootstrap Theme Made By someone who snatch this from w3schools
   </br>
-  <ul>https://habr.com/ru/post/258225/ call back services <a href="https://habr.com/ru/post/258225/">HABR</a> topic</ul>
+  <ul>https://habr.com/ru/post/258225/ call back services <a href="https://habr.com/ru/post/258225/">HABR</a>
+  topic</ul>
+  <ul>https://habr.com/ru/company/promopult/blog/472610/  meta tags, data for g0ogle bot's<a href="https://habr.com/ru/company/promopult/blog/472610/">HABR</a></ul>
   </p>
   
 </footer>

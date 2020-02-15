@@ -9,7 +9,6 @@ display: -webkit-inline-box;
 tr,td {
 padding: 5px;
 border: 1px solid black;
-  
   }
   
   
@@ -21,26 +20,6 @@ border: 1px solid black;
 
 }
 
-.preHeader img{
-	padding:0.3em;
-}
-
-.preHeader {
-	/* border:2px solid red; */
-	padding:3px;
-	padding-top: 1%;
-	display:-webkit-inline-box;
-	top:0px;
-	width:-webkit-fill-available;
-}
-
-.column {
-	width:33.3333333%;
-	position:relative;
-	text-align:center;
-	float:left;
-}
-
 .column.phone{
 	text-align:left;
 	font-size:22px;
@@ -48,14 +27,12 @@ border: 1px solid black;
 	padding-left: 15%;
 }
 
-.preHeader a{
+.telNum{
 	text-decoration:underline;
 	color:rgb(200,70,15);
 	font-size:2em;
 }
-.preHeader::after{
-	clear:both;	
-}
+
 
 .el::before{
 	display:table;
@@ -72,20 +49,23 @@ border: 1px solid black;
 	content:" ";
 }
 
-.preHeader h3,h2,h1,h4,div{
-	margin:0px;
-}
+
 
 .navbar.navbar-default.navbar-fixed-top.mycss {
 	/* border:2px solid red; */
 	padding:3px;
 	background-color: #066bc6;
 	position:-webkit-sticky;
-	display:-webkit-inline-box;
 	width:-webkit-fill-available;
 	position:sticky;
 	top:0;
 	/* padding: 10px; */
+}
+
+.preHeader {
+	line-height:1;
+	/* padding:0.4em 0.3em; */
+	margin:1.4em 0em;
 }
 
 .nav li{
@@ -97,19 +77,27 @@ border: 1px solid black;
 }
 
 #mrone, #mrtwo {
-	height:500px;
+	color: black;
+	position: relative;
+}
+
+#bss {	
 	padding:5px;
 	background-attachment: local;
 	/* background-size: auto; */
 	background-clip: padding-box;
 	background-position:center;
 	background-repeat:no-repeat;
-	background-size:cover;
-	color: black;
-	position: relative;
-}
+	background-size:cover;}
+
 #mrone {
-	background-image:url('pic/mr.jpg');
+	/* background-image:url('pic/mr.jpg'); */
+	padding:0;
+}
+
+#onepic {
+width: 100%;
+height: auto;	
 }
 
 #mrtwo {
@@ -121,13 +109,36 @@ ul {
 }
 
 .oc {
-	width:33.3333%;
+	/* width:33.3333%;
 	float:left;
 	position:relative;
-	text-align:center;
+	text-align:center; */
 	/* border:0.3px dashed red; */
 }
 
 .inoc {
-	display:-webkit-inline-box;
+	/* display:-webkit-inline-box; */
+}
+
+.innerContainer {
+
+}
+
+.maxwidth {
+	width:100%;
+}
+
+.abs {
+	position: absolute;
+	width: -webkit-fill-available;
+	text-align: center;
+	top: 10%;
+}
+
+.asdqwe {
+	
+}
+
+.np {
+	padding:0px;
 }
