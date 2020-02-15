@@ -7,7 +7,7 @@ display: -webkit-inline-box;
 }
 
 tr,td {
-padding: 5px;
+/* padding: 5px; */
 border: 1px solid black;
   }
   
@@ -21,6 +21,7 @@ border: 1px solid black;
 }
 
 .column.phone{
+	width: -webkit-fill-available;
 	text-align:left;
 	font-size:22px;
 	font-style:bold;
@@ -49,34 +50,35 @@ border: 1px solid black;
 	content:" ";
 }
 
-
-
-.navbar.navbar-default.navbar-fixed-top.mycss {
 	/* border:2px solid red; */
+	/* padding: 10px; */
+	
+.navbar.navbar-default.navbar-fixed-top.mycss {
 	padding:3px;
 	background-color: #066bc6;
 	position:-webkit-sticky;
-	width:-webkit-fill-available;
+	/* width:-webkit-fill-available; */
 	position:sticky;
 	top:0;
-	/* padding: 10px; */
+
 }
 
 .preHeader {
 	line-height:1;
 	/* padding:0.4em 0.3em; */
 	margin:1.4em 0em;
-	display: -webkit-inline-box;
-	width: -webkit-fill-available;
+	/*display: -webkit-inline-box;
+	width: -webkit-fill-available;*/
 }
 
 #topHeader div.container {
-	position: absolute;
+	/* position: absolute; */
 	width: -webkit-fill-available;
 	top:0.5em;
 	left: 0;
 	font-size:2em;
 	font-family: sans-serif;
+	display:-webkit-inline-box;
 }
 
 #myNavbar {
@@ -149,7 +151,12 @@ ul {
 	position: absolute;
 	width: -webkit-fill-available;
 	text-align: center;
+	left:0;
 	top: 10%;
+}
+
+footer {
+	text-align:center;
 }
 
 .asdqwe {
@@ -159,3 +166,14 @@ ul {
 .np {
 	padding:0px;
 }
+
+.container.fluid {
+	margin:0;
+}
+
+#pricing, .row, .col-sm-12 {
+	margin:0;
+	padding:0;
+}
+
+#pricing.row {
