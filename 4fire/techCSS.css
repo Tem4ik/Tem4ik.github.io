@@ -184,8 +184,4 @@ footer {
 #pricing.row {
 }
 
-@media screen and (max-width: 720px) {
-	.navbar-brand.np {
-		display: none;
-	}
-}
+
