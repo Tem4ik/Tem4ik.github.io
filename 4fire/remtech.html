@@ -171,11 +171,20 @@
       opacity: 0;
       -webkit-transform: translateY(70%);
     } 
-    100% {
+    100% {	
       opacity: 1;
       -webkit-transform: translateY(0%);
     }
   }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+	.navbar-brand.np {
+		display: none;
+	}
+  }
+  
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -191,16 +200,12 @@
       font-size: 150px;
     }
   }
-	  
-  @media screen and (max-width: 720px) {
-    .navbar-brand.np {
-		 display: none;
-	}
-		#myNavbar {
-		font-size: 1.5em;
-		}
-}
   
+  @media screen and (max-width: 720px) {
+	.navbar-brand.np {
+		display: -webkit-inline-box;
+	}
+}
 
   </style>
 </head>
@@ -235,8 +240,9 @@
 </div>
 </div>
 </div>
-<!-- </div> -->
+
 <div class='clearfix'></div>
+<!-- </div> 			Navigation-->
 <nav class="navbar navbar-default navbar-fixed-top mycss">
   <div class="container">
     <div class="navbar-header">
@@ -272,6 +278,7 @@
   </div>
   
 </nav>
+						<!-- </div> 			Navigation fin-->
 
 <div class="jumbotron text-center" id="mrone">
 <img class='img-responsive maxwidth' src='pic/mr.jpg'>
