@@ -71,6 +71,7 @@ border: 1px solid black;
 	width: -webkit-fill-available;*/
 }
 
+
 #topHeader div.container {
 	/* position: absolute; */
 	width: -webkit-fill-available;
@@ -78,7 +79,11 @@ border: 1px solid black;
 	left: 0;
 	font-size:2em;
 	font-family: sans-serif;
-	display:-webkit-inline-box;
+	display:initial;
+}
+
+#topHeader div.container.mycs {
+	width: inherit;
 }
 
 #myNavbar {
