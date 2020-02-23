@@ -88,8 +88,12 @@ border: 1px solid black;
 
 #myNavbar {
 	font-size:1.5em;
-	font-family: sans-serif;		
 	letter-spacing:0;
+	font-family: sans-serif;		
+}
+
+nav {
+	user-select: none;
 }
 
 .nav li{
