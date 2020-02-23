@@ -158,7 +158,12 @@ ul {
 	text-align: center;
 	left:0;
 	top: 10%;
+	color:yellow;
 }
+.abs h2{
+	color:yellow;
+}
+
 
 footer {
 	text-align:center;
