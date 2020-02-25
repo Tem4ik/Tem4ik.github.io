@@ -1,0 +1,195 @@
+/* #myNavbar li {
+	font-size:xx-large;	
+} */
+
+table {
+display: -webkit-inline-box;
+}
+
+tr,td {
+/* padding: 5px; */
+border: 1px solid black;
+  }
+  
+  
+.navbar .navbar-default .navbar-fixed-top {
+	background-color: blue;
+}
+
+.jumbotron .text-center {
+
+}
+
+/* .column.phone{ */
+	/* width: -webkit-fill-available; */
+	/* text-align:left; */
+	/* font-size:22px; */
+	/* font-style:bold; */
+	/* padding-left: 15%; */
+/* } */
+
+.telNum{
+	text-decoration:underline;
+	color:rgb(200,70,15);
+	font-size:1.5em;
+}
+
+
+.el::before{
+	display:table;
+	content:" ";
+}
+.el::before{
+	box-sizing: border-box;
+}
+.el::after{
+	clear:both
+}
+.el::after{
+	display:table;
+	content:" ";
+}
+
+	/* border:2px solid red; */
+	/* padding: 10px; */
+	
+.navbar.navbar-default.navbar-fixed-top.mycss {
+	padding:3px;
+	background-color: #066bc6;
+	position:-webkit-sticky;
+	/* width:-webkit-fill-available; */
+	position:sticky;
+	top:0;
+
+}
+
+.preHeader {
+	line-height:1;
+	/* padding:0.4em 0.3em; */
+	margin:1.4em 0em;
+	/*display: -webkit-inline-box;
+	width: -webkit-fill-available;*/
+}
+
+
+#topHeader div.container {
+	/* position: absolute; */
+	width: -webkit-fill-available;
+	top:0.5em;
+	left: 0;
+	font-size:1.75em;
+	font-family: sans-serif;
+	display:initial;
+}
+
+#topHeader div.container.mycs {
+	width: inherit;
+}
+
+#myNavbar {
+	font-size:1.5em;
+	letter-spacing:0;
+	font-family: sans-serif;		
+}
+
+nav {
+	user-select: none;
+}
+
+.nav li{
+	border:2px solid #066bc6;
+}
+
+.disabled{
+	display:none;
+}
+
+#mrone, #mrtwo {
+	color: black;
+	position: relative;
+}
+
+#bss {	
+	padding:5px;
+	background-attachment: local;
+	/* background-size: auto; */
+	background-clip: padding-box;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;}
+
+#mrone {
+	/* background-image:url('pic/mr.jpg'); */
+	padding:0;
+}
+
+#onepic {
+width: 100%;
+height: auto;	
+}
+
+#mrtwo {
+	background-image:url('pic/mr2.jpg')
+}
+
+ul {
+	text-align:left;
+}
+
+.oc {
+	/* width:33.3333%;
+	float:left;
+	position:relative;
+	text-align:center; */
+	/* border:0.3px dashed red; */
+}
+
+.inoc {
+	/* display:-webkit-inline-box; */
+}
+
+.innerContainer {
+
+}
+
+.maxwidth {
+	width:100%;
+}
+
+.abs {
+	position: absolute;
+	width: -webkit-fill-available;
+	text-align: center;
+	left:0;
+	top: 10%;
+	color:yellow;
+}
+.abs h2{
+	color:yellow;
+}
+
+
+footer {
+	text-align:center;
+}
+
+.asdqwe {
+	
+}
+
+.np {
+	padding:0px;
+}
+
+.container.fluid {
+	margin:0;
+}
+
+#pricing, .row, .col-sm-12 {
+	margin:0;
+	padding:0;
+}
+
+#pricing.row {
+	
+}
