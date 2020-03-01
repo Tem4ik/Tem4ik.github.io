@@ -11,6 +11,10 @@ tr,td {
 border: 1px solid black;
   }
   
+thead {
+	background-color: #066bc6;
+	color:white;
+}
   
 .navbar .navbar-default .navbar-fixed-top {
 	background-color: blue;
@@ -134,6 +138,7 @@ height: auto;
 
 ul {
 	text-align:left;
+	
 }
 
 .oc {
@@ -162,10 +167,14 @@ ul {
 	text-align: center;
 	left:0;
 	top: 10%;
-	color:yellow;
+/* 	color:#0F0F0F;
+	font-size:1.74em; */
 }
-.abs h2{
-	color:yellow;
+.abs, .abs h2, h3{
+	color:#0F0F0F;
+	font-size:1.74em;
+	font-size: -webkit-xxx-large;
+	font-weight:bold;
 }
 
 
@@ -192,4 +201,48 @@ footer {
 
 #pricing.row {
 	
+}
+
+#brands div img{
+	padding: 3px;
+	margin: 2px;
+}
+
+.todoMemArea {
+	background-color: rgba(64,64,64,0.4);
+	border: 1.5px solid black;
+}
+
+.thumbnail {
+	background-color: RGBA(155,155,155,0.05);
+}
+
+.pd0 {
+	padding:0;
+}
+
+/*  Спиздили */
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+.shakeIt img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.shakeIt:hover {
+	background-color: RGBA(50,50,50,0.03);
 }

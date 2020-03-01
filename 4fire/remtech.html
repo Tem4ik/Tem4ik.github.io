@@ -211,6 +211,7 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class = 'disabled'>
 <div id="topTop" style = "padding:0.1em">
 <div class='clearfix'></div>
 </div>
@@ -414,7 +415,6 @@
       <p>отремонтируем поломку в день обращения, без лишних накруток, или в удобное для Вас время.</p>
     </div>
   </div>
-</div>
 
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
@@ -423,23 +423,23 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <img src="pic/tools.png" alt="Paris" width="400" height="300">
+        <p><strong>First column</strong></p>
+        <p>paragraph under first column</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
+        <img src="pic/tools.png" alt="New York" width="400" height="300">
+        <p><strong>Second col</strong></p>
+        <p>paragraph in second column</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
+        <img src="pic/tools.png" alt="San Francisco" width="400" height="300">
+        <p><strong>Third col</strong></p>
+        <p>Text in third column</p>
       </div>
     </div>
   </div><br>
@@ -540,7 +540,7 @@
     <h2>Цены</h2>
     <h4>Гибкие цены на любой вкус и кошелёк.</h4>
   <table>
-<tbody>
+<thead>
 <tr>
 <td><b>
 НАИМЕНОВАНИЕ
@@ -548,6 +548,8 @@
 </td>
 <td><b>СТОИМОСТЬ</b></td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>Диагностика</td>
 <td>500 (область – цена договорная)</td>
@@ -663,9 +665,49 @@
     </div>    
   </div>
 </div>
+</div>  <!-- disabled div -->
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="brands" class="container-fluid bg-grey">
+<h2 class="text-center">Производители бытовой техники</h2>
+	<div class="col-sm-12">
+<image src='pic/tech-brands/aeg.png'/>
+<image src='pic/tech-brands/ardo.png'/>
+<image src='pic/tech-brands/ariston.png'/>
+<image src='pic/tech-brands/bauknecht.png'/>
+<image src='pic/tech-brands/beko.png'/>
+<image src='pic/tech-brands/bosch.png'/>
+<image src='pic/tech-brands/brandt.png'/>
+<image src='pic/tech-brands/brother.png'/>
+<image src='pic/tech-brands/candy.png'/>
+<image src='pic/tech-brands/elelux.png'/>
+<image src='pic/tech-brands/gorenje.png'/>
+<image src='pic/tech-brands/hansa.png'/>
+<image src='pic/tech-brands/indesit.png'/>
+<image src='pic/tech-brands/lg.png'/>
+<image src='pic/tech-brands/miele.webp'/>
+<image src='pic/tech-brands/neff.png'/>
+<image src='pic/tech-brands/panasonic.png'/>
+<image src='pic/tech-brands/philips.png'/>
+<image src='pic/tech-brands/samsung.png'/>
+<image src='pic/tech-brands/siemens.png'/>
+<image src='pic/tech-brands/smeg.png'/>
+<image src='pic/tech-brands/toshiba.png'/>
+<image src='pic/tech-brands/whirpool.png'/>
+<image src='pic/tech-brands/wistmart.png'/>
+<image src='pic/tech-brands/zanussi.png'/>
+		
+	</div>
+</div>
+<!-- Image of location/map -->
+<img src="pic/tools.png" class="w3-image w3-greyscale-min" style="" onclick="ge('.disabled').style.display='block'">
+
+<!-- <footer class="container-fluid text-center" id="footer"> -->
+<footer id="footer">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">Контакты</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -691,15 +733,8 @@
     </div>
   </div>
 </div>
-
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
-<!-- <footer class="container-fluid text-center" id="footer"> -->
-<footer id="footer">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
+</div>
+<div class = 'todoMemArea'>
   <div class="row text-center">
   <div class='col-sm-3'>
 	Bootstrap Theme Made By someone who snatch this from w3schools
@@ -717,7 +752,7 @@
 	<p style="font-size:1.5em;">тик так: <div id="demo" style="font-size:1.5em"></div></p>
 	</div>
   </div>
-  
+</div>
 </footer>
 
 <script>
