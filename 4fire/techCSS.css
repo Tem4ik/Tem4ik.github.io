@@ -170,11 +170,11 @@ ul {
 /* 	color:#0F0F0F;
 	font-size:1.74em; */
 }
-.abs, .abs h2, h3{
+.abs {
 	color:#0F0F0F;
-	font-size:1.74em;
-	font-size: -webkit-xxx-large;
-	font-weight:bold;
+	/* font-size:30vw; */
+	/* font-size: -webkit-xxx-large; */
+	/* font-weight:bold; */
 }
 
 
@@ -245,4 +245,16 @@ canvas:hover {
 
 .shakeIt:hover {
 	background-color: RGBA(50,50,50,0.03);
+}
+.imgcontainer {
+	position:relative;
+	max-width:800px;
+}
+
+.am {
+	margin:0 auto;
+}
+
+.imgcontainer .insideic {
+	
 }
