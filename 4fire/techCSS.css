@@ -255,6 +255,17 @@ canvas:hover {
 	margin:0 auto;
 }
 
+.abm {
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	transform:translate(50%, 50%);
+}
+
+.img-responsive .maxwidth .myimg {
+	max-width: 700px;
+}
+
 .imgcontainer .insideic {
 	
 }
