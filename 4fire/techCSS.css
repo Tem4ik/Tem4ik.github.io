@@ -1,4 +1,4 @@
-/* #myNavbar li {
+#myNavbar li {
 	font-size:xx-large;	
 } */
 
@@ -289,4 +289,26 @@ canvas:hover {
 	width:100%;
 	top:0;
 	/* color:black; */
+}
+
+.myBtn {
+	display:-webkit-inline-box;
+	padding:3px;
+	margin:5px;
+	border:1px solid black;
+	color:white;
+	background-color:rgba(0,0,0,0.75);
+	border-radius:10px;
+	font-size: xx-large;
+	/* transition: box-shadow 1s; */
+	
+}
+
+
+
+.myBtn:hover {
+	background-color:rgba(0,0,0,1);
+	box-shadow: 30px 20px 5px 0 rgba(0, 0, 0, .7), inset 14px 17px 15px 10px rgb(255, 177, 0);
+	/* 30px 20px 5px 0 rgba(0, 0, 0, 0.64), 30px 20px 10px 5px rgba(255, 0, 0, 1); */
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
