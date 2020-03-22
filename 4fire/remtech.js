@@ -8,6 +8,13 @@ else console.log("doc.readyState is ",document.readyState);
 
 function initJ(){
 	document.addEventListener('clicked',function(){});
+	 // let ww =ge('video');
+	// ww.loop=true;
+	// ww.onmouseover=function(){ww.play();};
+	
+	// ww.addEventListener('clicked',function(){console.log('video clicked');});
+	// ge('video').onended=function(){ge('video').play();}
+	// setTimeout(function(){ge('video').loop=true;ge('video').play()},3000);
 }
 
 
