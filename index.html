@@ -178,14 +178,6 @@
     }
   }
   
-  
-  
-  @media screen and (max-width: 768px) {
-	.navbar-brand.np {
-		display: none;
-	}
-  }
-  
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -195,18 +187,28 @@
       width: 100%;
       margin-bottom: 35px;
     }
+		.navbar-brand.np {
+		display: none;
+	}
   }
+
+  @media screen and (max-width: 720px) {
+	.navbar-brand.np {
+		display: -webkit-inline-box;
+	}
+  }
+  
   @media screen and (max-width: 480px) {
     .logo {
       font-size: 150px;
     }
   }
-  
-  @media screen and (max-width: 720px) {
-	.navbar-brand.np {
-		display: -webkit-inline-box;
+    @media screen and (max-width: 300px) {
+	.myText h1{
+	  font-size: 10vw;
+	  color: blue;
 	}
-}
+  }
 
   </style>
 </head>
@@ -297,16 +299,17 @@
 
 
 
-<div class="jumbotron text-center" id="mrone">
-<!-- <img class='img-responsive maxwidth' src='pic/mr.jpg'> -->
-
-<img class='myimg' src='pic/bittech.jpg'>
-  <div class='text-center' style = 'position:absolute; width:100%; top:0;'>
-      <h1>CompanyName</br>
-  Приедем, починим, итд итп
-  </h1> 
-  </div>
-
+<div class="jumbotron text-center">
+	<!-- <img class='img-responsive maxwidth' src='pic/mr.jpg'> -->
+	<div id='mrone'>
+	<img class='myImg img-responsive' src='pic/bittech.jpg'>
+	
+	<div class='myText'>
+	  <h1>CompanyName</br>
+		Приедем, починим, итд итп
+	  </h1> 
+	</div>
+	</div>
 </div>
 
 <!-- Container (About Section) -->
