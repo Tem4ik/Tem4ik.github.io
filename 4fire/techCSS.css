@@ -263,6 +263,10 @@ canvas:hover {
 	max-width: 700px;
 }
 
+.myImg {
+	margin: 0 auto;
+}
+
 .imgcontainer .insideic {
 	
 }
