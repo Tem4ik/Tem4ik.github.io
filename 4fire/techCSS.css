@@ -93,7 +93,8 @@ thead {
 #myNavbar {
 	font-size:1.5em;
 	letter-spacing:0;
-	font-family: sans-serif;		
+	font-family: sans-serif;
+	font-style: oblique;
 }
 
 nav {
@@ -285,7 +286,8 @@ canvas:hover {
 }
 
 .myText {
-	position:absolute;
+	/* position:absolute; */
+	color:rgba(0,0,0,.5);
 	width:100%;
 	top:0;
 	/* color:black; */
