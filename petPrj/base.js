@@ -15,5 +15,7 @@ function gem(inp){
 }
 
 function initJ(){
-	
+	/*event's init	*/
+	tip('initJ() occur')
 }
+
