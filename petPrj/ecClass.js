@@ -46,7 +46,7 @@ class ec{
 	}
 	
 	get name(){
-		return this.elName;
+		return this.newElement;
 	}
 	
 	
