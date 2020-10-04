@@ -106,6 +106,9 @@ static radioMaker(whichOne){
 			ifr.src="//www.radiorecord.ru/player/tab10-mini/";
 			ifr.frameborder="0";
 			ifr.style="width: 222px; height: 59px; overflow: hidden;";			
+			cons.makeRadioBtns();
+			// /tab10-mini/?st=teo 
+			// brks, chil, club, dc, deep, dub, gop, mdl, ps, pump, rus, sd90, teo, tm, trap, vip, yo, rock, mix, techno
 		}
 		else {			
 			ifr.src="//www.radiorecord.ru/player/";
@@ -118,6 +121,21 @@ static radioMaker(whichOne){
 		radioDiv.append(ifr);
 		
 	}
+	
+static makeRadioBtns(){
+	var btn = document.createElement('div');
+	btn.onclick = function(){ge('iframe').src = '//www.radiorecord.ru/player/tab10-mini/?st=teo' }
+	btn.innerText = "teo";
+	
+	var btn1 = document.createElement('div');
+	btn1.onclick = function(){ge('iframe').src = '//www.radiorecord.ru/player/tab10-mini/?st=ps' }
+	btn1.innerText = "ps";
+	
+		var btn2 = document.createElement('div');
+	btn2.onclick = function(){ge('iframe').src = '//www.radiorecord.ru/player/tab10-mini/?st=gop' }
+	btn2.innerText = "gop";
+	ge('#radio').append(btn);ge('#radio').append(btn1);ge('#radio').append(btn2);
+}
 
 // ge('#console').innerText.concat(inText)
 	// ge('#console').innerText.concat(inText.to);
