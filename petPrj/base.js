@@ -6,11 +6,11 @@ console.log("documentReadyStateChange from my JS");
 else console.log("doc.readyState is ",document.readyState);
 }
 
-function ge(inp){
+function ge(inp){		/*getElement(selector)*/
 	return document.querySelector(inp);
 }
 
-function gem(inp){
+function gem(inp){		//*getManyElement's(selector)*/
 	return document.querySelectorAll(inp);
 }
 
