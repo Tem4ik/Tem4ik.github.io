@@ -99,7 +99,7 @@ static commandReader(input){
 
 
 static radioMaker(whichOne){
-		let ifr = document.createElement('iframe');
+		var ifr = document.createElement('iframe');
 		
 		
 		if(whichOne===undefined) {
