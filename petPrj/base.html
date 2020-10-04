@@ -11,6 +11,10 @@
 	<script src = "tip.js" defer></script>
 	<script src = "ecClass.js" defer></script>
 	<script src = "keyReader.js" defer></script>
+	<!-- <script src = "elementCreator.js" defer></script> -->
+	
+	
+	
 	<!-- <script src = "	" defer></script> -->
 	<!-- <script src = "	" defer></script> -->
 	
@@ -52,8 +56,11 @@ here feathures;
 </div>
 </div>
 
-<div id='modalFrame'></div>
+<div id='modalFrame' class='hidden'></div>
+<div id='radio'>
+<div id="record-mini-player"></div>
 
+</div>
 <!-- <footer class="container-fluid text-center" id="footer"> -->
  <div class='btm fa'>footer content div</div>
 </div>
@@ -64,4 +71,5 @@ here feathures;
 <script></script>
 
 </body>
+<script> window.onload = function() { document.getElementById("record-mini-player").innerHTML='<iframe src="//www.radiorecord.ru/player/tab10-mini/" frameborder="0" style="width: 222px; height: 59px; overflow: hidden;"></iframe>'; } </script>
 </html>

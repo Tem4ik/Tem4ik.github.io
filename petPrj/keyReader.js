@@ -75,11 +75,49 @@ static commandReader(input){
 		tip("<a href='https://drive.google.com/file/d/0B13Cgs91FtzOb05mNEtfRl9YbjQ/view?usp=sharing'>q3load</a>",'red');
 		
 		break;
+		
+
+		case "tbl":
+			// var newTbl = new excel()
+			tip('tbl called', 'orange');
+		break;
+
+		
+		case "rad":
+		cons.radioMaker('q');
+		
+		break;
+		case "rd":
+		cons.radioMaker();
+		break;
+
 		default:
 		tip('nothing to do','blue');
 		break;
-	}
+	}//end Switch(input)
 }
+
+
+static radioMaker(whichOne){
+		let ifr = document.createElement('iframe');
+		
+		
+		if(whichOne===undefined) {
+			ifr.src="//www.radiorecord.ru/player/tab10-mini/";
+			ifr.frameborder="0";
+			ifr.style="width: 222px; height: 59px; overflow: hidden;";			
+		}
+		else {			
+			ifr.src="//www.radiorecord.ru/player/";
+			ifr.frameborder="0";
+			ifr.style="width: 680px; height: 464px; overflow: hidden";
+		}
+		
+		// let radioDiv = ge('#radio');
+		let radioDiv = ge('#record-mini-player');
+		radioDiv.append(ifr);
+		
+	}
 
 // ge('#console').innerText.concat(inText)
 	// ge('#console').innerText.concat(inText.to);

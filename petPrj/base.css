@@ -4,6 +4,12 @@ body {
 	margin:0;
 }
 
+
+
+
+
+
+
 .heap {
 	background-color:blue;
 	position:sticky;
@@ -80,13 +86,17 @@ body {
 
 /* modalFrame used for any dinamic content; */
 #modalFrame {
-	display: none;
+	/* display: none; */
 	position:fixed;
 	width:-webkit-fill-available;
 	height:100%;
 	top:0;
 	left:0;
+	text-align:center;
+	border: 3px dashed red;
 }
+
+
 
 #console {
 	position: fixed;
@@ -162,3 +172,7 @@ body {
 	display:none;
 }
 
+
+.hidden {
+	display:none !important;
+}
