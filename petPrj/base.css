@@ -80,6 +80,7 @@ body {
 
 /* modalFrame used for any dinamic content; */
 #modalFrame {
+	display: none;
 	position:fixed;
 	width:-webkit-fill-available;
 	height:100%;
@@ -88,22 +89,49 @@ body {
 }
 
 #console {
-	position: absolute;
+	position: fixed;
 	display: block;
 	width: -webkit-fill-available;
 	height: 50%;
-	padding: 10px;
+	/* padding: 10px; */
 	border: 3px dashed blue;
 	background-color: #AAA;
-	text-align: center;``
+	/* text-align: center;`` */
 	top: -50%;
+	padding-left:10px;
+}
+
+
+#logAreaContainer {
+	display:-webkit-box;
+	/* background-color:#00FFFF; */
+	height:95%;
+	
+}
+
+
+#logArea {
+	background-color:#FFF;
+	border: 1px dashed red;
+	/* height:--webkit-fill-available; */
+	width:100%;
+	/* display:flex; */
+	overflow:auto;
+	
 }
 
 #console input{
-	position: absolute;
-    bottom: 0;
+	/* position:absolute; */
+    /* bottom: 0; */
     width: -webkit-fill-available;
     left: 0;
+}
+
+#inT{
+	display:block;
+	background-color:red;
+	/* padding:30px; */
+	
 }
 
 #console.show{
@@ -128,7 +156,6 @@ body {
 	from{top:-50%; opacity: 0;}
 	to{top:0; opacity: 1;}
 }
-
 
 
 .disabled {

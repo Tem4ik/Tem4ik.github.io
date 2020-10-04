@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Ремонт бытовой техники на дому</title>
+  <!-- <meta charset="utf-8"> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src = "4fire/remtech.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?someParam=none"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js?someParam=none"></script>
+  <link type="text/css" rel="stylesheet" href="4fire/techCSS.css">
+  <style>
+  body {
+    font: 400 15px Roboto, Open Sans, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+	<!-- font-size: 1.55em; -->
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #d4efea;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #066bc6;
+    font-size: 50px;
+  }
+  .logo {
+    color: #066bc6;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: ##066bc6;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {	
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+		.navbar-brand.np {
+		display: none;
+	}
+  }
+
+  @media screen and (max-width: 720px) {
+	.navbar-brand.np {
+		display: -webkit-inline-box;
+	}
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+    @media screen and (max-width: 300px) {
+	.myText h1{
+	  font-size: 10vw;
+	  color: blue;
+	}
+  }
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div id="topTop" style = "padding:0.1em">
+<div class='clearfix'></div>	
+</div>
+<div class = "row preHeader" id ="topHeader">
+<!-- <div class='container-responsive'> -->
+<div class = "col-sm-3 text-center">
+<!-- <img src='pic/Hrepair/wmachineLogotipe.png'>
+<img src='pic/Hrepair/wmachineLogotipe2.png'> -->
+<img src='pic/icons/tools.png'>
+</div>
+<div class="col-sm-6 text-center">
+<div class='container'>
+"Company Name" </br>
+ремонт стиральных машин, бытовой техники на дому
+</div>
+</div>
+
+<!-- phone -->
+<div class = "col-sm-3 text-center">
+
+<!-- href="tel:+7..." -->
+<div class = 'container mycs'>
+<!-- <div></div> -->
+ЗВОНИТЕ
+</br>
+<a class="telNum" href="tel:8-888-88-88">8-888-88-88</a>
+</br>
+С 10 ДО 22
+</div>
+</div>
+</div>
+
+<div class='clearfix'></div>
+<!-- </div> 			Navigation-->
+<nav class="navbar navbar-default navbar-fixed-top mycss">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  
+	 
+      <!-- <a class="navbar-brand" href="#myPage"> 
+	  Logo
+	  </a> -->
+	 <a href="#myPage">
+	  <img class='navbar-brand np' src='pic/Hrepair/wmach_57.png'>
+	 </a>
+	 
+	  
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="#topTop">Вверх</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Работы</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="#contact">Контакты</a></li>
+		<li><a href="#footer">Вниз</a></li>
+      </ul>
+    </div>
+	
+  </div>
+  
+</nav>
+						<!-- </div> 			Navigation fin-->
+<div class = 'clearfix'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jumbotron text-center">
+<div class='myText'>
+	  <h1>CompanyName</br>
+		Приедем, починим, итд итп
+	  </h1> 
+	</div>
+	<!-- <img class='img-responsive maxwidth' src='pic/mr.jpg'> -->
+	<div id='mrone'>
+	
+	<img class='myImg img-responsive' src='pic/bittech.jpg'>
+	
+	
+	</div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>О компании:</h2>
+	  <p>
+Мы молодая, развивающаяся компания построенная на принципах порядочности, профессианализма и тщательном подходе.
+Инженеры работающие у нас, это сертифицированные сервисные мастера в своих направлениях. 
+Мы стараемся удовлетворить любой запрос связанный с ремонтом бытовой техники работая над расширением спектра услуг.
+Не стесняйтесь прислать в ватсапе или телеграме фото/видео, модель устройства и рассказать по подробнее о поломке, 
+что бы мы рассмотрели возможность ремонта и сформировать максимально приближенную к реальности стоимость.
+Специализируемся на стиральных и посудомоечных машинах которые ремонтируем в основном на территории заказчика.
+По желанию клиента наши мастера готовы рассмотреть возможность ремонта в ночное время.
+
+Так же мы готовы взяться за ремонт компьютеров, ноутбуков, планшетов, мобильных телефонов. В этом случае курьер заберёт устройство
+в мастерскую и при необходимости даст временный телефон что бы вы оставались на связи со своими коллегами/близкими/нами.
+	  </p>
+	  </br>
+      <h2>О нас:  </h2>
+      <p>Мы сможем решить Вашу проблему со стиральной или посудомоечной машиной – от простейшего засора до ремонта модуля управления.
+Расскажем в чём причина поломки и как их избежать в будующем.
+Наши мастера  Вызвать мастера можно по телефону <a href='tel:00000000'>00000000</a> или через наш сайт.
+
+Не мало важный плюс нашей компании это единая клиентская база которая позволяет предоставлять постоянную скидку на любые виды работ
+например: сегодня вы отремонтировали стиральную машину, ваш номер телефона и детали проводимых работ попали в нашу базу,
+а завтра вы получили 10% скидку на замену экрана телефона или профилактику компьютера или ноутбука...
+
+Так же единая база позволяет отслеживать гарантийные случаи.
+Как это работает? : вы называете свой номер телефона, оператор видит, что вы ранее обращались с ремонтом того или иного узла
+устройства, мы произвели ремонт или замену, в течении 6 месяцев с момента завершения работ данный узел снова откажет
+то мы восстановим его за наш счёт.(это не касается разбитого стекла телефона)</p></br>
+      <br>
+	  <button class="btn btn-default btn-lg disabled">Get in Touch</button>
+    </div>
+    <div class="col-sm-4 text-center">
+      <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+	  <h2>Мастер класс экспресс починки стиральной машинки</h2>
+	  <img class = 'img-responsive am'src = 'pic/giphy3.gif'/>
+
+	  <!-- <div style="text-align:center;"> -->
+	<!-- <p style="font-size:30px;">тик так:</p> -->
+	<!-- <p id="demo" style="font-size:30px"></p> </div> -->
+    </div>
+	</br>
+  </div>
+</div>
+<div class="container-fluid text-center">
+	  <div class ='am' onclick ="ge('video').play()"
+	  onmouseover ="ge('video').play()">
+	  <video width='auto' height='auto' controls loop=true autoplay=true 
+	  onmouseover='console.log("v movered")'
+	  >
+	  <!-- onmouseover='console.log("v movered")' -->
+	  
+	  
+		<source src='pic/zheavy.webm'>
+	  </video>
+		  </div>
+		  <div class='myBtn' onclick="$('video').toggleClass('disabled')">Hide/Show</div>
+</div>
+<div class="container-fluid bg-grey">
+<!-- <img class="img-responsive maxwidth" src='pic/mr4.jpg'> -->
+  <!-- <div class="row"> -->
+    <div class="col-sm-4">
+      <!-- <span class="glyphicon glyphicon-globe logo slideanim"></span> -->
+	  <!-- <img src = 'pic/icons/auto.png' class = 'shakeIt'/> -->
+	  
+	  <canvas class = 'img-responsive am' id="canvas" width="400" height="400"
+style="background-color:RGBA(33,33,33,0)"></canvas>
+	  <br>
+	  <a href = 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text'> w3 img text centered</a>
+    </div>
+    <div class="col-sm-8">
+      <h2>Наши ценности</h2><br>
+      <h4><strong>Наша миссия:</strong></h4>
+	  <p>
+Удовлетворять потребность клиентов в ремонтных работах за адекватные цены, отремонтировать Вашу технику,
+экономя Ваши средства мы зарабатываем себе репутацию и немного на покушать, а самое главное - мы Верим в то что 
+сэкономленные средства не уйдут недобросовестным мастерам, не пойдут на развитие псевдо - ремонтных услуг, 
+а Вы сможете ими распорядиться по своему разумению, надеемся хоть сколько поддержать качество Вашей жизни, 
+ну и самим не пропасть.
+
+заявление на электронную почту(сервис и помощ бланки доку) someword@somedomain.com 
+	  </p>	
+<h2 style='color:red'>Примим в дар:</h2>
+<p>
+В связи с необходимостью наполнения класса по расширению кругозора/повышения квалификации мастеров нам требуется 
+сломанные бытовые устройства не подлежащие восстановлению, сдайте их нашему курьеру или мастеру, в благодарность получите
+дополнительную 5%-15% накопительную разовую скидку на наши услуги.
+</p>	  
+    </div>
+  <!-- </div> -->
+  
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Что мы предлагаем?</h2>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Ремонт</h4>
+      <p>Ремонтные работы любой сложности. Квалифицированный персонал прошедший сертификацию, только оригинальные запчасти, починим в день обращения, точную диагностику, выявим необходимые работы, или проведём обслуживание техники. Все работы утверждаются ВАМИ!</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Простота и надёжность</h4>
+      <p>Вы всегда будете знать сколько будет стоить ремонт, а на ремонтируемые узлы и агрегаты получите гарантийный талон. Гарантии мы берём на себя, практикуя ответственный подход к проделанной работе.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Гарантия на выполненные работы</h4>
+      <p>На все наши рабо	ы мы предоставляем гарантию от 6 мес. до 1 года</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4></h4>
+      <p>Вы всегда будете знать сколько будет стоить ремонт, мы за честность!, поможем, подскажем, поделимся имеющимся опытом.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>Сертифицированные специалисты</h4>
+      <p>Наши мастера сертифицированы квалифицированны и имеют богатейший опыт устранения неисправностей.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">Квалифицированная диагностика, лицензионные комплектующие. </h4>
+      <p>отремонтируем поломку в день обращения, без лишних накруток, или в удобное для Вас время.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Спектр наших услуг</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <ul>
+<h2>Ремонт, разборка и утилизация</h2>
+<li>Ремонт модулей						</li>
+<li>РЕМОНТ БАКОВ НЕРАЗБОРНЫХ и РАЗ БОРНЫХ </li>
+<li>Ремонт стиральных машин. </li>
+<li>Ремонт модуля посудомоечных машин. </li>
+<li>Ремонт холодильников. </li>
+<li>Разборка стиральных машин. </li>
+<li>РАЗБОРКА ПММ </li>
+<li>Утилизация стиральных машин </li>
+<li>Утилизация холодильников. </li>
+</ul>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <ul>
+<h2>НОВЫЕ ЗАПЧАСТИ В НАЛИЧИИ И ПОД ЗАКАЗ.</h2>
+<li><strong>Специальные цены для мастеров </li></strong>
+<h2>ТЕХНИКА В НАЛИЧИИ:</h2>
+<li>Стиральные машины любых видов и марок.	</li>
+<li>Холодильники в наличии ЛЮБЫЕ </li>
+</ul>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <ul>
+	<h2>РАЗБОРКА Б/У:</h2>
+<li>Бак в сборе. </li>
+<li>Бак в разборе. </li>
+<li>Люки в сборе. </li>
+<li>Люк в разборе. </li>
+<li>Моторы. </li>
+<li>Манжеты. </li>
+<li>Модули. </li>
+<li>Периферия </li>
+<li>УБЛ. </li>
+<li>Дозаторы. </li>
+<li>Ручки люков. </li>
+</ul>
+      </div>
+    </div>
+  </div><br>
+  
+
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+</br class=".el">
+<div class='row'>
+<div class='col-sm-4	 text-center'>
+<h2>C нами легко.</h2>
+<img class = 'img-responsive am' src = 'pic/icons/order.png'>
+</div>
+<div class='col-sm-8	 text-center'>
+    <h2>Цены</h2>
+    <h4>Гибкие цены на любой вкус и кошелёк.</h4>
+  <table>
+<thead>
+<tr>
+<td><b>
+НАИМЕНОВАНИЕ
+</b>
+</td>
+<td><b>СТОИМОСТЬ</b></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Диагностика</td>
+<td>500 (область – цена договорная)</td>
+</tr>
+<tr>
+<td>Замена нагревателя</td>
+<td>От 3000</td>
+</tr>
+<tr>
+<td>Замена датчика</td>
+<td>От 1500</td>
+</tr>
+<tr>
+<td>Замена насоса</td>
+<td>От 3000</td>
+</tr>
+<tr>
+<td>Замена клапана</td>
+<td>От 2500</td>
+</tr>
+<tr>
+<td>Замена ремня</td>
+<td>От 2000</td>
+</tr>
+<tr>
+<td>Замена амортизатора</td>
+<td>От 2000</td>
+</tr>
+<tr>
+<td>Ремонт плат</td>
+<td>От 4000</td>
+</tr>
+<tr>
+<td>Замена подшипника</td>
+<td>От 5500</td>
+</tr>
+<tr>
+<td>Устранение засора</td>
+<td>От 1500</td>
+</tr>
+<tr>
+<td>Замена заливного шланга</td>
+<td>От 2000</td>
+</tr>
+<tr>
+<td>Замена сливного шланга</td>
+<td>От 2000</td>
+</tr>
+</tbody>
+</table>
+<p>*Точная стоимость ремонта может быть установлена только после осмотра вашей стиральной машины. Поэтому диагноз по телефону является предварительным. Диагностика мастером из другой фирмы в расчет не принимается. (Бывает неоправданно завышенный или неправильно определена поломка). Скидки предоставляются льготным категориям граждан.</p>
+</div>
+
+</div>
+</br>
+
+  </div>
+  
+<div class="container-fluid bg-grey text-center pd0">
+  <h2>Отзывы наших клиентов</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Лучшая компания на свете, бла бла бла итд итп"<br><span>заинтересованное лицо №1</span></h4>
+      </div>
+      <div class="item">
+	  <div class='photoC'>
+<img src ='4fire/pic/wmsmile.jpg' class = 'img-responsive' style = 'border-radius:55%; height:inherit;height:250;width:250;'/>
+	  </div>
+        <h4>That's amazing expirience, thanks master for their job he fixed everything he could.</h4>
+      </div>
+      <div class="item">
+        <h4>"а мне кажется комментарии стоит убрать, либо внедрять механизм их отправки на сайте, а то выходит комментарии есть, но отправлять их нельзя. </span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+
+<!-- Container (Contact Section) -->
+<div id="brands" class="container-fluid text-center">
+<h2 class="text-center">Производители бытовой техники</h2>
+	<div class="col-sm-12">
+<image src='pic/tech-brands/aeg.png'/>
+<image src='pic/tech-brands/ardo.png'/>
+<image src='pic/tech-brands/ariston.png'/>
+<image src='pic/tech-brands/bauknecht.png'/>
+<image src='pic/tech-brands/beko.png'/>
+<image src='pic/tech-brands/bosch.png'/>
+<image src='pic/tech-brands/brandt.png'/>
+<image src='pic/tech-brands/brother.png'/>
+<image src='pic/tech-brands/candy.png'/>
+<image src='pic/tech-brands/elelux.png'/>
+<image src='pic/tech-brands/gorenje.png'/>
+<image src='pic/tech-brands/hansa.png'/>
+<image src='pic/tech-brands/indesit.png'/>
+<image src='pic/tech-brands/lg.png'/>
+<image src='pic/tech-brands/miele.webp'/>
+<image src='pic/tech-brands/neff.png'/>
+<image src='pic/tech-brands/panasonic.png'/>
+<image src='pic/tech-brands/philips.png'/>
+<image src='pic/tech-brands/samsung.png'/>
+<image src='pic/tech-brands/siemens.png'/>
+<image src='pic/tech-brands/smeg.png'/>
+<image src='pic/tech-brands/toshiba.png'/>
+<image src='pic/tech-brands/whirpool.png'/>
+<image src='pic/tech-brands/wistmart.png'/>
+<image src='pic/tech-brands/zanussi.png'/>
+		
+	</div>
+</div>
+<!-- Image of location/map -->
+
+<!-- <footer class="container-fluid text-center" id="footer"> -->
+<footer id="footer">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Контакты</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Свяжитесь с нами и мы ответим в течении суток<p><span class="glyphicon glyphicon-map-marker"></span> г.Москва. ул д 7 125777</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +7 (495) ZZZZZZZ</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>  anyMail@anyDomain.any</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class = 'todoMemArea'>
+  <div class="row text-center">
+  <div class='col-sm-3'>
+	Bootstrap Theme Made By someone who snatch this from w3schools
+  </div>
+  </br>
+  <div class='col-sm-3'>
+  call back services <a href="https://habr.com/ru/post/258225/">HABR</a>
+  </div>
+</br> 
+  <div class='col-sm-3'>meta tags, data for g0ogle bot's<a href="https://habr.com/ru/company/promopult/blog/472610/">HABR</a>
+  </div>
+  <div class='clearfix'></div>
+ </br>
+  	<div style="text-align:center;">
+	<p style="font-size:1.5em;">тик так: <div id="demo" style="font-size:1.5em"></div></p>
+	</div>
+  </div>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script>
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+</body>
+</html>
