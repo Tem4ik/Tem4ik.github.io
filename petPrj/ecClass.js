@@ -1,6 +1,6 @@
 // strict mode;
 
-class ec{
+class ec{//ELEMENT CONSTRUCTOR
     
     constructor(elName, pNode){
         this.newElement=elName;

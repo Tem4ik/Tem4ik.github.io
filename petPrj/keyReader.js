@@ -130,11 +130,7 @@ static makeRadioBtns(){
 	var btn1 = document.createElement('div');
 	btn1.onclick = function(){ge('iframe').src = '//www.radiorecord.ru/player/tab10-mini/?st=ps' }
 	btn1.innerText = "ps";
-	
-		var btn2 = document.createElement('div');
-	btn2.onclick = function(){ge('iframe').src = '//www.radiorecord.ru/player/tab10-mini/?st=gop' }
-	btn2.innerText = "gop";
-	ge('#radio').append(btn);ge('#radio').append(btn1);ge('#radio').append(btn2);
+
 }
 
 // ge('#console').innerText.concat(inText)

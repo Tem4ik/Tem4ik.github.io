@@ -90,12 +90,20 @@ body {
 	position:fixed;
 	width:-webkit-fill-available;
 	height:100%;
+	background-color:#AFA;
 	top:0;
 	left:0;
 	text-align:center;
 	border: 3px dashed red;
 }
 
+#inmodalFrame {
+	background-color:#BBB;
+	display:block;
+	width:50%;
+	padding: 10px;
+	border:1px solid black;
+}
 
 
 #console {
@@ -176,4 +184,15 @@ body {
 .hidden {
 	display:none !important;
 }
+
+#footer {
+	position: fixed;
+    border: 1px solid red;
+    padding: 10px;
+    display: block;
+    width: -webkit-fill-available;
+    bottom: 0;
+}
+
+
 
