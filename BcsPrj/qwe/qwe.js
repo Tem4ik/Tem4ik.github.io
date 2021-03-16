@@ -8,7 +8,8 @@ else console.log("doc.readyState is ",document.readyState);
 
 function initJ(){
 	// document.addEventListener('clicked',function(){});
-	
+	add_tbl_btn_reactions();
+	addStyle(); addMsgFrame();
 }
 
 
@@ -29,3 +30,194 @@ function tgle(tle_obj,inb){
 	// this.classList.remove('active')
 }
 
+
+
+
+
+
+
+
+// qq SIA			SERVICES LIST
+
+
+
+function add_tbl_btn_reactions(){
+	ge('.Burger').onclick = function(){brgBtn();};
+	ge('.Banner-Desc-Buttons__Rates').onclick = function(){tip('Select rates Button',"Green",2500);};
+	ge('.Banner-Desc-Buttons__About').onclick = function(){tip('about company Btn',"Blue", 3000);};
+	ge('.Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
+	ge('.Services__Link').onclick = function(){tip("All services",'orange',5000);};
+	ge('.Form__Submit').onclick = function(){tip("NOT WORKING in moment","red",7777);};
+	ge('.CallOrder').onclick = function(){tip("NOT WORKING in moment","red",7777);};
+	
+	
+	
+	
+	
+	
+	sia.length===0?sia = gea('.ServicesItem'):0;
+	sia.forEach(swa);
+}
+
+var sia = gea('.ServicesItem');
+
+function si(){
+sia.forEach(siRe);
+  function siRe(e){
+    e["children"][1]["style"]["display"]="none";
+	}
+}
+
+function swa(e){
+e.onclick = function() {
+	ge(".ServicesItem_active").classList.remove('ServicesItem_active');
+	si();
+	e.classList.add ('ServicesItem_active');
+	e.lastElementChild.style.display="block";
+	}
+}
+
+
+
+// END qq SIA
+
+function brgBtn(){
+	// style="padding-right: 5px;" class="	"
+	// ge('.mobileMenu').classList.add("		");
+	// ge(".Burger").classList.add("		");
+	// var obj = ["brgBtn","mobileMenu","body"];
+	// obj.forEach(classTrig);
+	classTrig(ge('body'),'BodyOverflow');
+	classTrig(ge('.mobileMenu'),'mobileMenu_active');
+	classTrig(ge('.Burger'),'Burger_active');
+}
+
+
+function classTrig(elem, trigClassName){
+	let StrigClassName = '.' + trigClassName;
+	ge(StrigClassName)==null?elem.classList.add(trigClassName): elem.classList.remove(trigClassName);
+	// replace(trigClassName,"");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			/* TIP JS*/
+
+function tip(text, color, timer){
+	let mf = ge('#msgFrame');
+	timer !== undefined? timer: timer=3200;
+	if	(color != undefined){
+	mf.style.backgroundColor = color;
+	setTimeout(function(){mf.style.backgroundColor = "#AAA"},timer);
+	}
+	mf.className = "show";
+	mf.innerHTML  = " " + text;
+	setTimeout(function(){mf.className = mf.className.replace("show","");},timer);
+}
+
+
+function addStyle(){
+var mst = ge('HEAD style');
+mst.innerHTML.length>0? 0:  mst.innerHTML="#msgFrame{visibility: hidden; text-align: center; background-color: #AAA; padding: 30px; border: 3px solid black; margin: 10px; position: fixed !important; width: 300px; height: 50px; z-index: 100; left: 40%; bottom: 5%; font-size: 21px; display: table; } #msgFrame.show{visibility: visible; animation: fadein 0.5s,fadeout 0.3s 3s;  }   @keyframesfadein{from{bottom: 0; opacity: 0; } to{bottom: 5%; opacity: 1; } } @keyframesfadeout{from{bottom: 5%; opacity: 1; } to{bottom: 0; opacity: 0; } }";
+
+}
+
+function addMsgFrame(){
+	var tipFrame= document.createElement('div');
+	tipFrame.id = "msgFrame";
+	ge('body').appendChild(tipFrame);
+}
+			// TIP JS END
+			
+			
+			/* msgFrame div used for tip function, ... */
+			/*
+			CSS
+#msgFrame {
+	visibility: hidden;
+	text-align: center;
+	background-color: #AAA;
+	padding: 30px;
+	border: 3px solid black;
+	margin: 10px;
+	position: absolute;
+	width: 300px;
+	height:	50px;
+	z-index: 1;
+	left: 40%;
+	bottom: 5%;
+	font-size: 21px;
+	display: table;
+	}
+	
+#msgFrame.show {
+	visibility: visible;
+	animation: fadein 0.5s, fadeout 0.3s 3s;
+}	
+
+@keyframes fadein	{
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 5%; opacity: 1;}
+	}
+	
+@keyframes fadeout	{
+	from {bottom: 5%; opacity:1;}
+	to {bottom: 0; opacity: 0;}
+}
+*/
+/* msgFrame ES */
+
+// #msgFrame{visibility: hidden; text-align: center; background-color: #AAA; padding: 30px; border: 3px solid black; margin: 10px; position: fixed !important; width: 300px; height: 50px; z-index: 100; left: 40%; bottom: 5%; font-size: 21px; display: table; } #msgFrame.show{visibility: visible; animation: fadein 0.5s,fadeout 0.3s 3s;  }   @keyframesfadein{from{bottom: 0; opacity: 0; } to{bottom: 5%; opacity: 1; } } @keyframesfadeout{from{bottom: 5%; opacity: 1; } to{bottom: 0; opacity: 0; } }
