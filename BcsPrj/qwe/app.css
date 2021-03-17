@@ -4094,7 +4094,7 @@ iframe {
 
 /* My section */
 
-.About-Video, .Price, .Whom {
+.About-Video, .Price, .Whom, .Popup {
 	display: none !important;
 }
 .Header img {
