@@ -10,6 +10,7 @@ function initJ(){
 	// document.addEventListener('clicked',function(){});
 	add_tbl_btn_reactions();
 	addStyle(); addMsgFrame();
+	sws.init();
 }
 
 
@@ -42,9 +43,21 @@ var sws = {
 	btn_next(){this.currentNum++; this.proceed()},
 	btn_v(inI){console.log('here1');
 		this.currentNum+=inI; this.proceed();},
-	proceed(){console.log('here2'); this.dataValidata(); if(this.valid==true){this.doIt();}else{console.log('tValid false');};},
-	dataValidata(){if(this.inited==false){this.init(); return;};(this.currentNum<4 && this.currentNum>0)?this.valid = true:this.valid = false},
-	doIt(){console.log('doIt' + this.currentNum); },
+	proceed(){console.log('here2'); this.dataValidata(); if(this.valid==true){this.doIt();}else{this.currentNum<0?this.currentNum=0:0;this.currentNum>3?this.currentNum=3:3;};},
+	dataValidata(){if(this.inited==false){this.init(); return;};(this.currentNum<4 && this.currentNum>-1)?this.valid = true:this.valid = false},
+	doIt(){prq(); ge('.slick-track').style.transform = "translate3d(-" + parseInt(ge('.slick-track').style.width)/6*sws.currentNum +"px, 0px, 0px)"; this.btnsCheck();},
+	btnsCheck(){
+		while(ge('.slick-disabled')!=null){ge('.slick-disabled').classList.remove('slick-disabled');}
+	if(this.currentNum == 3)ge('.Cases-Arrows__Btn_next').classList.add('slick-disabled');	
+	if (this.currentNum == 0)ge('.Cases-Arrows__Btn_prev').classList.add('slick-disabled');
+
+	},
+		
+		
+	
+	//ge('.slick-track').style.transform ="translate3d(0px, 0px, 0px)"
+	
+
 }
 
 function pr(){
@@ -75,9 +88,7 @@ function add_tbl_btn_reactions(){
 	ge('.Services__Link').onclick = function(){tip("All services",'orange',5000);};
 	ge('.Form__Submit').onclick = function(){tip("NOT WORKING in moment","red",7777);};
 	ge('.CallOrder').onclick = function(){tip("NOT WORKING in moment","red",7777);};
-	
-	
-	
+
 	// tip(sws.show() +'>>>', '#15d948b0',700);
 	ge('.Cases-Arrows__Btn_prev').onclick = function(){sws.btn_prev(); var tmp = tip('<<<<\t'+sws.show()+'\tBB', '#15d948b0',700); };
 	// ge('.Cases-Arrows__Btn_next').onclick = function(){nt(); tip('>>>', '#18ff15',800);};
@@ -138,6 +149,27 @@ function classTrig(elem, trigClassName){
 
 
 
+function prq(){
+    let sqq = gea('div .Cases-Slider-Item.slick-slide');
+while(ge('.slick-current')!==null){
+    var td =ge('.slick-current');
+	td.classList.remove('slick-current');
+    console.log('remove slickCurrent');
+}
+while(ge('.slick-active')!=null){
+	ge('.slick-active').tabIndex=-1;ge('.slick-active').ariaHidden="true";
+    ge('.slick-active').classList.remove('slick-active');
+    console.log('remove slick-active');
+}
+
+sqq[sws.currentNum].classList.add('slick-current');
+
+for (var i=sws.currentNum; i<sws.currentNum+3; i++){
+    sqq[i].classList.add('slick-active');
+    sqq[i].tabIndex=0;
+    sqq[i].ariaHidden="false";
+}
+}
 
 
 
