@@ -15,7 +15,8 @@ function initJ(){
 
 function ge(inp){
 	return document.querySelector(inp);
-}
+	}
+
 
 function gea(inp){
 	return document.querySelectorAll(inp);
@@ -31,10 +32,34 @@ function tgle(tle_obj,inb){
 }
 
 
+var sws = {
+	currentNum:0,
+	valid:false,
+	inited:false,
+	init(){if (this.inited==false){this.currentNum = parseInt(ge('.slick-current')["dataset"]["slickIndex"]);this.inited=true;}},
+	show(){var tmp = this.currentNum; return tmp},
+	btn_prev(){console.log('here1'); this.currentNum-- ; this.proceed()},
+	btn_next(){this.currentNum++; this.proceed()},
+	btn_v(inI){console.log('here1');
+		this.currentNum+=inI; this.proceed();},
+	proceed(){console.log('here2'); this.dataValidata(); if(this.valid==true){this.doIt();}else{console.log('tValid false');};},
+	dataValidata(){if(this.inited==false){this.init(); return;};(this.currentNum<4 && this.currentNum>0)?this.valid = true:this.valid = false},
+	doIt(){console.log('doIt' + this.currentNum); },
+}
 
+function pr(){
+	sws.btn_prev();
+};
 
+function nt(){
+	sws.btn_next();
+};
 
-
+var sww = function(){
+	this.currentN=0;
+	
+}
+var w = new sww();
 
 
 // qq SIA			SERVICES LIST
@@ -45,15 +70,19 @@ function add_tbl_btn_reactions(){
 	ge('.Burger').onclick = function(){brgBtn();};
 	ge('.Banner-Desc-Buttons__Rates').onclick = function(){tip('Select rates Button',"Green",2500);};
 	ge('.Banner-Desc-Buttons__About').onclick = function(){tip('about company Btn',"Blue", 3000);};
-	ge('.Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
+	ge('header .Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
+	ge('footer .Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
 	ge('.Services__Link').onclick = function(){tip("All services",'orange',5000);};
 	ge('.Form__Submit').onclick = function(){tip("NOT WORKING in moment","red",7777);};
 	ge('.CallOrder').onclick = function(){tip("NOT WORKING in moment","red",7777);};
 	
 	
 	
+	// tip(sws.show() +'>>>', '#15d948b0',700);
+	ge('.Cases-Arrows__Btn_prev').onclick = function(){sws.btn_prev(); var tmp = tip('<<<<\t'+sws.show()+'\tBB', '#15d948b0',700); };
+	// ge('.Cases-Arrows__Btn_next').onclick = function(){nt(); tip('>>>', '#18ff15',800);};
 	
-	
+	ge('.Cases-Arrows__Btn_next').onclick = function(){sws.btn_next();tip('BB\t'+sws.currentNum+'\t>>>', '#15d948b0',700); };
 	
 	sia.length===0?sia = gea('.ServicesItem'):0;
 	sia.forEach(swa);
