@@ -1,3 +1,16 @@
+
+
+
+function ge(inp){
+	return document.querySelector(inp);
+	}
+
+
+
+function gea(inp){
+return document.querySelectorAll(inp); }
+
+
 document.onreadystatechange = function() {
 if (document.readyState === "complete"){
 console.log("documentReadyStateChange from my JS");
@@ -13,15 +26,6 @@ function initJ(){
 	sws.init();
 }
 
-
-function ge(inp){
-	return document.querySelector(inp);
-	}
-
-
-function gea(inp){
-	return document.querySelectorAll(inp);
-}
 
 
 function tgle(tle_obj,inb){
@@ -77,9 +81,28 @@ var w = new sww();
 
 // qq SIA			SERVICES LIST
 
+// function add_tbl_btn_reactions(){
+	// ge('.Burger').onclick = function(){brgBtn();};
+	// ge('.Banner-Desc-Buttons__Rates').onclick = function(){tip('Select rates Button',"Green",2500);};
+	// ge('.Banner-Desc-Buttons__About').onclick = function(){tip('about company Btn',"Blue", 3000);};
+	// ge('header .Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
+	// ge('footer .Logo').onclick = function(){tip('BB logo', '#15d948b0',4000);};
+	// ge('.Services__Link').onclick = function(){tip("All services",'orange',5000);};
+	// ge('.Form__Submit').onclick = function(){tip("NOT WORKING in moment","red",7777);};
+	// ge('.CallOrder').onclick = function(){tip("NOT WORKING in moment","red",7777);};
 
+	// tip(sws.show() +'>>>', '#15d948b0',700);
+	// ge('.Cases-Arrows__Btn_prev').onclick = function(){sws.btn_prev(); var tmp = tip('<<<<\t'+sws.show()+'\tBB', '#15d948b0',700); };
+	// ge	('.Cases-Arrows__Btn_next').onclick = function(){nt(); tip('>>>', '#18ff15',800);};
+	
+	// ge('.Cases-Arrows__Btn_next').onclick = function(){sws.btn_next();tip('BB\t'+sws.currentNum+'\t>>>', '#15d948b0',700); };
+	
+	// sia.length===0?sia = gea('.ServicesItem'):0;
+	// sia.forEach(swa);
+// }
 
 function add_tbl_btn_reactions(){
+
 	ge('.Burger').onclick = function(){brgBtn();};
 	ge('.Banner-Desc-Buttons__Rates').onclick = function(){tip('Select rates Button',"Green",2500);};
 	ge('.Banner-Desc-Buttons__About').onclick = function(){tip('about company Btn',"Blue", 3000);};
@@ -94,7 +117,7 @@ function add_tbl_btn_reactions(){
 	// ge('.Cases-Arrows__Btn_next').onclick = function(){nt(); tip('>>>', '#18ff15',800);};
 	
 	ge('.Cases-Arrows__Btn_next').onclick = function(){sws.btn_next();tip('BB\t'+sws.currentNum+'\t>>>', '#15d948b0',700); };
-	
+
 	sia.length===0?sia = gea('.ServicesItem'):0;
 	sia.forEach(swa);
 }
@@ -241,7 +264,11 @@ function addMsgFrame(){
 	tipFrame.id = "msgFrame";
 	ge('body').appendChild(tipFrame);
 }
-			// TIP JS END
+		
+
+
+
+		// TIP JS END
 			
 			
 			/* msgFrame div used for tip function, ... */
