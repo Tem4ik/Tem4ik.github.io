@@ -1,0 +1,114 @@
+
+
+html {
+	/* display: block; */
+}
+.btn{
+	padding: 10px;
+	border: 2px solid red;
+	margin: 5px;
+	background-color: gray;
+	display: inline-block;
+	user-select: none;
+}
+
+.btn:hover{
+	background-color: #3ade0e;
+}
+
+
+
+.sampleChunk{
+	width:99%;
+	display: inline-block;
+	overflow:hidden;
+	background-color: #3333;
+	text-align:center;
+	/* padding:3px; */
+	border:2px solid brown;
+	/* margin:5px; */
+	/* height:500px; */
+	/* height: 100%; */
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.area{
+	margin: 1px;
+	border: 1px solid red;
+	padding: 3px;
+}
+
+.heap{
+	position: sticky;
+	top: 0;
+	background-color: #AAAAAA;
+}
+
+.mArea,.ct,footer{
+	text-align:center;
+}
+
+.resizebleArea{
+	height: 555px;
+	padding: 3px;
+	border: 2px solid black;
+	/* margin: auto; */
+	resize: both;
+	overflow:hidden;
+	transition-property: width height;
+	transition-duration: 10ms;
+	transition-timing-function: linear;
+}
+
+canvas {
+	border: 1px solid red;
+	width: 99%;
+	height:  -webkit-fill-available;
+}
+
+
+
+
+
+/* <div id='msgFrame'></div> */
+
+
+/* msgFrame div used for tip function, ... */
+/* #msgFrame { */
+	/* visibility: hidden; */
+	/* text-align: center; */
+	/* background-color: #AAA; */
+	/* padding: 30px; */
+	/* border: 3px solid black; */
+	/* margin: 10px; */
+	/* position: absolute; */
+	/* width: 300px; */
+	/* height:	50px; */
+	/* z-index: 1; */
+	/* left: 40%; */
+	/* bottom: 5%; */
+	/* font-size: 21px; */
+	/* } */
+	
+/* #msgFrame.show { */
+	/* visibility: visible; */
+	/* animation: fadein 0.5s, fadeout 0.3s 3s; */
+/* }	 */
+
+/* @keyframes fadein	{ */
+	/* from {bottom: 0; opacity: 0;} */
+	/* to {bottom: 5%; opacity: 1;} */
+	/* } */
+	
+/* @keyframes fadeout	{ */
+	/* from {bottom: 5%; opacity:1;} */
+	/* to {bottom: 0; opacity: 0;} */
+/* } */
+
+/* msgFrame ES */
