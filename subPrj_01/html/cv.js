@@ -70,7 +70,17 @@ let setBtn = document.createElement('div');
 	if(ge('.aa')==null){
 		this.classList.add('aa');
 		ge('canvas').classList.add('crossC');
-		ge('canvas').onclick = function(event){console.log(event.x," ",event.y);}
+		// ge('canvas').onclick = function(event){console.log(event.x," ",event.y," mr ::"); }
+		ge('canvas').onclick = function(event){
+			let tX = Number(event.x-this.offsetLeft);
+			let tY = Number(event.y - this.offsetTop);
+			cc.X = tY;
+			cc.Y = tX;
+			cc.init();
+			console.log(tX," ",tY," mr ::");
+			cc.makeCircle(10,tX,tY);
+			}
+		// window.onclick = function(event){console.log(event.x," ",event.y," mr ::",event.target); }
 		}
 	else{
 		this.classList.remove('aa');
@@ -182,8 +192,11 @@ function graph(){
     // }
 	
 		this.resizeParentWithChild = function (){
-		let tW=ge('canvas').parentElement.offsetWidth
-        let tH = ge('canvas').parentElement.offsetHeight; 
+		// let tW=ge('canvas').parentElement.offsetWidth;
+        // let tH = ge('canvas').parentElement.offsetHeight; 
+		let tW = ge('canvas').clientWidth;
+        let tH = ge('canvas').clientHeight; 
+		
 		// this.activeCanvas.parentElement.style.width = tW +" px";
 		// this.activeCanvas.parentElement.style.height = tH +" px";
         // let  = this.activeCanvas.parentElement.clientWidth;
