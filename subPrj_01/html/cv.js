@@ -36,8 +36,8 @@ function readyStateComplete(){
 // ins[0].onwheel=function(event){cc.X=ins[0].value+Number(event.deltaY * - 0.1);};
 // ins[0].onwheel=wwq;
 let ins = gea('input');
-ins[0].onwheel=function(event)  {cc.X=this.value = Number(cc.X + event.deltaY * 1);};
-ins[1].onwheel=function(eve)	{cc.Y=this.value = Number(cc.Y + event.deltaY * -1);};
+ins[0].onwheel=function(event)  {cc.X=this.value = Number(cc.X + event.deltaY * 0.01*cc.Z);};
+ins[1].onwheel=function(eve)	{cc.Y=this.value = Number(cc.Y + event.deltaY * -0.01*cc.Z);};
 ins[2].onwheel=function(ev) 	{cc.Z=this.value = Number(cc.Z + event.deltaY * -0.1);};
 oipt();
 }
@@ -208,17 +208,28 @@ function graph(){
 			this.resizeParentWithChild();
 		this.cH = this.activeCanvas.height;
         this.cW = this.activeCanvas.width;
-		this.cC.clearRect(0,0,this.cW,this.cH)
+		this.cC.clearRect(0,0,this.cW,this.cH);
+		this.validata();
 			// this.setScale(25,10,5);
 		// this.makeAxis(this.activeCanvas.height/2,200, 75);
 		// this.makeAxis();
 		this.makeAxis(this.X,this.Y,this.Z);
 		//this.activeCanvas.parentElement.style.height = "-webkit-fill-available";
 		this.drawNums();
-		this.makeWeb();
+		this.makeWeb(1);
 		this.drawAxisDots();
 		}
 		
+		
+		this.validata = function(){
+			this.X<=0?this.X=1:this.X;
+			this.Y<=0?this.Y=1:this.Y;
+			this.Z<=0?this.Z=0.25:this.Z;
+			this.X>=this.cH?this.X=Number(this.cH-5):this.X;
+			this.Y>=this.cW?this.Y=Number(this.cW-5):this.Y;
+			this.Z>=this.cW?this.Z=Number(this.cW-15):this.Z;
+			
+		}
 	
 		this.setScale = function(xx, yy, zz){
 			xx != undefined? this.X = xx: console.log("xx",xx);
@@ -242,7 +253,7 @@ function graph(){
         y = W/2;
 
         if (z == undefined)
-        z = H/4;
+        z = H/10;
 
         s.beginPath();
         s.strokeStyle = "blue";
