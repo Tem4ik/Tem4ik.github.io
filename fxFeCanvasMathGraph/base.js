@@ -1,7 +1,6 @@
 
 //##########################################################################**Custom selectors, InitF;
 
-
 document.onreadystatechange = function() {
 if (document.readyState === "complete"){
 console.log("documentReadyStateChange from my JS");
@@ -21,14 +20,17 @@ function initJ(){
 }
 
 
-function ge(inp){
-	return document.querySelector(inp);
-	}
+var ge=(s)=>document.querySelector(s);
+var ge_=(s)=>document.querySelectorAll(s);
+
+// function ge(inp){
+	// return document.querySelector(inp);
+	// }
 
 
-function gea(inp){
-	return document.querySelectorAll(inp);
-}
+// function gea(inp){
+	// return document.querySelectorAll(inp);
+// }
 
 
 function tgle(tle_obj,inb){
