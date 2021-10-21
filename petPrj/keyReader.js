@@ -72,7 +72,7 @@ static commandReader(input){
 	switch(input){
 		case "q3dl":
 //		tip('q3view','red');
-		tip("<a href='https://drive.google.com/file/d/0B13Cgs91FtzOb05mNEtfRl9YbjQ/view?usp=sharing'>q3load</a>",'red');
+		tip("<a href='https://drive.google.com/file/d/1lkQnuDYJwh6d_mL1u9GXn60AKvWF7O--/view?usp=sharing'>q3load</a>",'red');
 		
 		break;
 		

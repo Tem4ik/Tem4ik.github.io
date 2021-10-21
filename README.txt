@@ -1,12 +1,7 @@
-#Tem4ik.github.io
-Here i will practice to frontend in particular
+Here is will be navigate meet board with some 'pet projects' 4 fun
+here will be used only native JS, CSS, HTML tech without any ready lib's
 
-HTML
-CSS
-JS
 
-Also sometime submit my work resume
-and save key particular backend technology files
-like SQL Prj or discrete script'save
-C++ C# Code, and other in process of gain new knowlege
-
+HTML doc -> define root structure of DOMobj;
+JS doc -> declares classes, functions, event's; main app logic determined here.
+CSS -> define behaviour styles of element's , their animation parammeter's;a

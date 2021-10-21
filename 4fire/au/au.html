@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Financial and accounting service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link type="text/css" rel="stylesheet" href="au.css"> -->
+    <script src = "au.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  
+}
+
+body, html {
+height: 100%;
+}
+
+.heap {
+  <!-- padding: 80px; -->
+  text-align: center;
+  background: #d1d1d1;
+  <!-- background: #1abc9c; -->
+  color: white;
+}
+
+.heap h1 {
+  font-size: 40px;
+}
+
+.qqq {
+	display:none;
+}
+
+.top-bar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+
+.top-bar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  user-select: none;
+}
+
+
+.top-bar a.right {
+  float: right;
+}
+
+.top-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.top-bar a.active {
+  background-color: #777;
+  color: white;
+}
+
+.fw,.fe {
+-ms-flex: 100%;
+flex: 100%;
+padding: 20px;
+background-color: #a3a3a3;
+}
+.fe{
+background-color: #f1f1f1;
+}
+
+.row {  
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 30%;
+  flex: 30%;
+  padding: 20px;
+}
+
+.main {   
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid red;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .top-bar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.toptel {
+    font-size: 1.5vw;
+    text-decoration: line-through;
+	
+}
+
+.mpic {
+  width: 100%;
+  height: auto;
+  max-height: 505px;
+}
+
+.ab {
+position: absolute !important;
+}
+
+.to {
+top: 0px !important;
+}
+
+.le {
+left: 10px !important;
+}
+
+.ri {
+right: 10px !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="heap">
+<!-- <image class='mpic' src='common/pic/mt.jpg'/> -->
+<image class='mpic' src='common/pic/qwe.png'/>
+<div class="row ab to ">
+<div class="side le">
+  <h1>Финансовый консалтинг</h1>
+  <p>Копметенция наш профиль</p>
+</div>
+<div class="side"></div>
+<div class="side toptel ri">
+<a class="toptel" href="tel:+123123123">+123123123</a>
+<a>email@mail.area</a>
+</div>
+</div>
+
+</div>
+
+<div class="top-bar">
+  <a href="#about" >о компании</a>
+  <a href="#services">услуги</a>
+  <a href="#contact">контакты</a>
+  <a href="#" class="right tgr_one_handle" onclick="tgle('.tgr_one',this)">Show/Hide LeftSide</a>
+</div>
+
+<div class="row">
+  <div class="side tgr_one qqq">
+    <h2>О компании</h2>
+    <h5 class="qqq">Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Сферы деятельности</p>
+	<ul>
+	<li>Бухгалтерские услуги</li>
+	<li> Аудиторские услуги</li>
+	<li>Финансовый консалтинг</li>
+	</ul>
+    <h3>Перечень услуг</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  
+  
+  
+  
+  <div class="main qqq">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>...</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+  
+  
+  <div class="main qqq">
+	<div class="row">asEs
+	<div class="fw">asIs</div>	
+	</div>
+  </div>
+  
+  
+  
+  
+  <div class="main">
+  <div class="fw" id="about">
+  <h2>Кто мы?</h2>
+  <p>пару слов о компании</p>
+  <div class="fakeimg" style="height:200px;">картинки?</div>
+  </div>
+  <div class="fe" id="services">
+  <h2>Услуги</h2>
+  <p>o услугах</p>
+  </div> 
+  <div class="fw" id="contact">
+  <h2>Контакты</h2>
+  <p>форма обратной связи</p>
+  </div>
+  <div class="fe"></div>  
+  <div class="fw"></div>
+  <div class="fe"></div>
+</div>
+</div>
+</body>
+<div class="footer">
+  <h2>Footer</h2>
+  <a href='https://a-count.net/uslugi'>a-count тащим</a>
+</div>
+</html>
